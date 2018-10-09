@@ -1,0 +1,6 @@
+git init
+git add *
+git commit -m "mensaje"
+git remote add origin https://github.com/Quiviro/ionic1.git
+git push -u origin master
+
