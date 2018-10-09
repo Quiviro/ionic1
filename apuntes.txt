@@ -4,6 +4,8 @@ git commit -m "mensaje"
 git remote add origin https://github.com/Quiviro/ionic1.git
 git push -u origin master
 
+gradle.org
+
 ionic cordova platform add android/ios/windows
 sudo ionic cordova build android/ios/windows
 
