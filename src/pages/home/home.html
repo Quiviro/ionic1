@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="micolor">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Botoneando</h2>
+  <p>
+    <button ion-button color="micolor" round (click)='primeraFuncion()'>
+      NIN
+    </button>
+    <button ion-button color="light">Light</button>
+    <button ion-button>Default</button>
+    <button ion-button color="secondary">
+      3
+      <ion-icon name="home" (click)="presentModal()"></ion-icon>
+      Q
+    </button>
+    <button ion-button color="danger">Danger</button>
+    <button ion-button color="dark">Dark</button>
+</ion-content>
