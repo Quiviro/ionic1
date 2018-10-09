@@ -7,3 +7,6 @@ git push -u origin master
 ionic cordova platform add android/ios/windows
 sudo ionic cordova build android/ios/windows
 
+Interfaz gráfica para control de versiones git + GitHub
+https://desktop.github.com
+
