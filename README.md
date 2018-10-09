@@ -1,1 +1,3 @@
-### :point_right: This starter repo has moved to the [ionic-team/starters](https://github.com/ionic-team/starters/tree/master/ionic-angular/official/tabs) repo! :point_left:
+### :point_right: Continuación del respositorio [JavaScript_e_Ionic](https://github.com/Quiviro/JavaScript_e_Ionic) :point_left:
+
+## He tenido que discontinuar el anterior repositorio y crear uno nuevo para este proyecto inicial con Ionic Framework
