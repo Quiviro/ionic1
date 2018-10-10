@@ -24,7 +24,7 @@ export class AboutPage {
       new TareaModelo("Médico"),
       new TareaModelo("Comida"),
       new TareaModelo("Ejercicio", true ),
-      new TareaModelo("Departamento Q", false, true),
+      new TareaModelo("Departamento Q", true, true),
       new TareaModelo("Entrenar", true)
     ];
   }
@@ -49,11 +49,18 @@ export class AboutPage {
 
   estilos(tarea:TareaModelo)
   {
-    let estilos;
-    if(tarea.importante)
+    let estilos = {
+      'font-weight': tarea.importante ? 600:'none',
+      'color': tarea.realizada ? 'lightgray':'inherit'
+    };
+ /*    if(tarea.importante)
     {
       estilos = {'font-weight': '600'};
     }
+    if(tarea.realizada)
+    {
+      estilos = {'text-decoration': 'line-through'};
+    } */
     return estilos;
   }
 

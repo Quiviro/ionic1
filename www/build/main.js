@@ -196,7 +196,7 @@ var AboutPage = (function () {
             new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Médico"),
             new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Comida"),
             new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Ejercicio", true),
-            new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Departamento Q", false, true),
+            new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Departamento Q", true, true),
             new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Entrenar", true)
         ];
     };
@@ -215,10 +215,18 @@ var AboutPage = (function () {
         this.tareas.push(tarea);
     };
     AboutPage.prototype.estilos = function (tarea) {
-        var estilos;
-        if (tarea.importante) {
-            estilos = { 'font-weight': '600' };
-        }
+        var estilos = {
+            'font-weight': tarea.importante ? 600 : 'none',
+            'color': tarea.realizada ? 'lightgray' : 'inherit'
+        };
+        /*    if(tarea.importante)
+           {
+             estilos = {'font-weight': '600'};
+           }
+           if(tarea.realizada)
+           {
+             estilos = {'text-decoration': 'line-through'};
+           } */
         return estilos;
     };
     AboutPage = __decorate([
