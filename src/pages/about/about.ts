@@ -19,13 +19,13 @@ export class AboutPage {
   {
     this.tareas = [
       new TareaModelo("Compras"),
-      new TareaModelo("Deporte"),
+      new TareaModelo("Deporte", true),
       new TareaModelo("Trabajo"),
       new TareaModelo("Médico"),
       new TareaModelo("Comida"),
-      new TareaModelo("Ejercicio", true, false ),
+      new TareaModelo("Ejercicio", true ),
       new TareaModelo("Departamento Q", false, true),
-      new TareaModelo("Entrenar")
+      new TareaModelo("Entrenar", true)
     ];
   }
 
@@ -45,6 +45,16 @@ export class AboutPage {
   anadeTarea(tarea:TareaModelo)
   {
     this.tareas.push(tarea);
+  }
+
+  estilos(tarea:TareaModelo)
+  {
+    let estilos;
+    if(tarea.importante)
+    {
+      estilos = {'font-weight': '600'};
+    }
+    return estilos;
   }
 
 }

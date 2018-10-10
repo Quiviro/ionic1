@@ -191,13 +191,13 @@ var AboutPage = (function () {
     AboutPage.prototype.ionViewDidLoad = function () {
         this.tareas = [
             new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Compras"),
-            new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Deporte"),
+            new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Deporte", true),
             new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Trabajo"),
             new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Médico"),
             new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Comida"),
-            new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Ejercicio", true, false),
+            new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Ejercicio", true),
             new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Departamento Q", false, true),
-            new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Entrenar")
+            new __WEBPACK_IMPORTED_MODULE_3__servicios_TareaModelo__["a" /* TareaModelo */]("Entrenar", true)
         ];
     };
     AboutPage.prototype.nuevaTarea = function () {
@@ -214,13 +214,21 @@ var AboutPage = (function () {
     AboutPage.prototype.anadeTarea = function (tarea) {
         this.tareas.push(tarea);
     };
+    AboutPage.prototype.estilos = function (tarea) {
+        var estilos;
+        if (tarea.importante) {
+            estilos = { 'font-weight': '600' };
+        }
+        return estilos;
+    };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Tareas\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <ion-item ion-item *ngFor = \'let tarea of tareas\'>\n      <ion-label>{{tarea.descripcion}}</ion-label>\n        <ion-checkbox [checked]="tarea.realizada"></ion-checkbox>\n        <!-- <ion-checkbox [checked]="tarea.importante"></ion-checkbox> -->\n    </ion-item>\n  </ion-list>\n  <ion-fab right bottom (click)="nuevaTarea()">\n    <button ion-fab color="danger">\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Tareas\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <ion-item ion-item *ngFor = \'let tarea of tareas\' \n    [ngStyle]=\'estilos(tarea)\'>\n      <ion-label>{{tarea.descripcion}}</ion-label>\n        <ion-checkbox [checked]="tarea.realizada"></ion-checkbox>\n        <!-- <ion-checkbox [checked]="tarea.importante"></ion-checkbox> -->\n    </ion-item>\n  </ion-list>\n  <ion-fab right bottom (click)="nuevaTarea()">\n    <button ion-fab color="danger">\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]) === "function" && _b || Object])
     ], AboutPage);
     return AboutPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=about.js.map

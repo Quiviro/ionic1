@@ -33,3 +33,8 @@ distributionUrl=\https\://services.gradle.org/distributions/gradle-4.1-rc-1-all.
 dependencies {
         classpath 'com.android.tools.build:gradle:3.0.0-beta4'
     }
+
+CalculApp
+
+Estilos "en línea"
+[ngStyle]="{'font-weight': 600, 'color': 'magenta'}"
