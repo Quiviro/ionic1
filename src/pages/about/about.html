@@ -8,8 +8,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item ion-item *ngFor = 'let tarea of tareas' 
-    [ngStyle]='estilos(tarea)'>
+    <ion-item ion-item *ngFor = 'let tarea of tareas' [ngStyle]='estiloNuevo(tarea)'>
       <ion-label>{{tarea.descripcion}}</ion-label>
         <ion-checkbox [checked]="tarea.realizada"></ion-checkbox>
         <!-- <ion-checkbox [checked]="tarea.importante"></ion-checkbox> -->

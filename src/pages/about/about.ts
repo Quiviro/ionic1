@@ -47,7 +47,7 @@ export class AboutPage {
     this.tareas.push(tarea);
   }
 
-  estilos(tarea:TareaModelo)
+  estiloNuevo(tarea:TareaModelo)
   {
     let estilos = {
       'font-weight': tarea.importante ? 600:'none',

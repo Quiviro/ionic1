@@ -38,3 +38,5 @@ CalculApp
 
 Estilos "en línea"
 [ngStyle]="{'font-weight': 600, 'color': 'magenta'}"
+
+
