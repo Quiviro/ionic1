@@ -16,27 +16,29 @@ Animaciones CSS
 https://daneden.github.io/animate.css/
 
 
-solución IOS.
+Posibles soluciones a construcción APK
+IOS:
 
-sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+  1. sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+  2. ionic cordova platform add ios
+  3. ionic cordova build ios
 
-solución para Android, 
+Android:
 
-1. acceder a fichero gradle.wapper.properties
+  1. acceder a fichero gradle.wapper.properties
 
-modificar variable, distributionUrl --> poned la distribucción solicitada en el error, 
+  modificar variable, distributionUrl --> poned la distribucción solicitada en el error, 
 
-distributionUrl=\https\://services.gradle.org/distributions/gradle-4.1-rc-1-all.zip
+  distributionUrl=\https\://services.gradle.org/distributions/gradle-4.1-rc-1-all.zip
 
-2. acceder a fichero build.gradle y modificar la dependencia de gradle. 
+  2. acceder a fichero build.gradle y modificar la dependencia de gradle. 
 
-dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0-beta4'
-    }
+  dependencies {
+          classpath 'com.android.tools.build:gradle:3.0.0-beta4'
+      }
 
-CalculApp
+CalculAppdora
 
 Estilos "en línea"
 [ngStyle]="{'font-weight': 600, 'color': 'magenta'}"
-
 
