@@ -12,3 +12,6 @@ sudo ionic cordova build android/ios/windows
 Interfaz gráfica para control de versiones git + GitHub
 https://desktop.github.com
 
+Animaciones CSS
+https://daneden.github.io/animate.css/
+
