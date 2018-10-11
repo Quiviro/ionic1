@@ -64,4 +64,16 @@ export class AboutPage {
     return estilos;
   }
 
+  borrarTarea(tarea:TareaModelo)
+  {
+    let indice = this.tareas.indexOf(tarea);
+    if(indice > -1)
+    {
+      this.tareas.splice(indice, 1);
+    }
+  }
+
+  actualizarTarea(tarea:TareaModelo)
+  {}
+
 }

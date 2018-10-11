@@ -42,3 +42,4 @@ CalculAppdora
 Estilos "en línea"
 [ngStyle]="{'font-weight': 600, 'color': 'magenta'}"
 
+sudo npm i -g gradle --save-dev

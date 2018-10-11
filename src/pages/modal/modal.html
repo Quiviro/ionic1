@@ -29,7 +29,8 @@
 
         </ion-checkbox>
       </ion-item>
-      <button ion-button type="submit">Añadir tarea</button>
+      <!-- el botón se activará cuando haya algo escrito -->
+      <button ion-button [disabled]="!estadoCampo.valid" type="submit">Añadir tarea</button>
     </form>
   </ion-list>
 </ion-content>
