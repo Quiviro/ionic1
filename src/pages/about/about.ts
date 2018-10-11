@@ -74,8 +74,9 @@ export class AboutPage {
     }
   }
 
-  test(tarea:TareaModelo)
+  comprobar(tarea:TareaModelo)
   {
+    // este if se puede optimizar
     if(!tarea.realizada)
     {
       tarea.realizada = true;
