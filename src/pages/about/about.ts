@@ -74,10 +74,25 @@ export class AboutPage {
     }
   }
 
+  test(tarea:TareaModelo)
+  {
+    if(!tarea.realizada)
+    {
+      tarea.realizada = true;
+    }
+    else
+    {
+      tarea.realizada = false;
+    }
+  }
+
   actualizarTarea(tarea:TareaModelo)
   {
     // el modal crea tareas, pero quiero modificar una ya creada
     // this.navCtrl.push(ModalPage);
+    let posicion = this.tareas.indexOf(tarea);
+    console.log(posicion);
+    console.log(tarea); 
   }
 
 }

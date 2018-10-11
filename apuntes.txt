@@ -9,6 +9,8 @@ gradle.org
 ionic cordova platform add android/ios/windows
 sudo ionic cordova build android/ios/windows
 
+ionic cordova platform remove android/ios/windows
+
 Interfaz gráfica para control de versiones git + GitHub
 https://desktop.github.com
 
@@ -47,3 +49,10 @@ sudo npm i -g gradle --save-dev
 Lanzar proyecto en vista previa
 ionic serve -l
 
+Abrir proyecto en simuladores:
+Android Studio: 
+  carpeta ".../platform/android"
+Xcode:
+  carpeta ".../platform/ios"
+
+  

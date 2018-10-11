@@ -15,7 +15,7 @@
     <form (ngSubmit)='enviarTarea()'>
       <ion-item>
         <ion-input clearInput placeholder="Añada tarea..." name="descripcion" required [(ngModel)]="tarea.descripcion" #estadoCampo='ngModel'>
-
+          {{tarea.descripcion}}
         </ion-input>
       </ion-item>
       <!-- voy a mirar las clases que incluye ionic por sí mismo
@@ -26,7 +26,7 @@
       <ion-item>
         <ion-label>¿Es importante?</ion-label>
         <ion-checkbox [(ngModel)]="tarea.importante" name="importante">
-
+          {{tarea.importante}}
         </ion-checkbox>
       </ion-item>
       <!-- el botón se activará cuando haya algo escrito -->
