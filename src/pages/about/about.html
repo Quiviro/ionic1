@@ -9,16 +9,17 @@
 <ion-content padding>
   <ion-list>
     <ion-item-sliding *ngFor = 'let tarea of tareas'>
-      <ion-item ion-item  [ngStyle]='estiloNuevo(tarea)'>
+      <ion-item ion-item [ngStyle]='estiloNuevo(tarea)'>
         <ion-label>{{tarea.descripcion}}</ion-label>
         <ion-checkbox [checked]="tarea.realizada"></ion-checkbox>
         <!-- <ion-checkbox [checked]="tarea.importante"></ion-checkbox> -->
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button (click)="borrarTarea(tarea)">
+        <button ion-button color="micolor" margin (click)="borrarTarea(tarea)">
           <ion-icon name="trash"></ion-icon>
         </button>
-        <button ion-button color="micolor" (click)="actualizarTarea(tarea)">
+         &nbsp; &nbsp;
+        <button ion-button color="micolor" margin (click)="actualizarTarea(tarea)">
           <ion-icon name="folder-open"></ion-icon>
         </button>
       </ion-item-options>

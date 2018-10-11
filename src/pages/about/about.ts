@@ -69,11 +69,15 @@ export class AboutPage {
     let indice = this.tareas.indexOf(tarea);
     if(indice > -1)
     {
+      // cambio el array quitando un elemento a partir de la posición 'índice'
       this.tareas.splice(indice, 1);
     }
   }
 
   actualizarTarea(tarea:TareaModelo)
-  {}
+  {
+    // el modal crea tareas, pero quiero modificar una ya creada
+    // this.navCtrl.push(ModalPage);
+  }
 
 }

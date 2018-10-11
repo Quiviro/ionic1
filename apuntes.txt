@@ -43,3 +43,7 @@ Estilos "en línea"
 [ngStyle]="{'font-weight': 600, 'color': 'magenta'}"
 
 sudo npm i -g gradle --save-dev
+
+Lanzar proyecto en vista previa
+ionic serve -l
+
