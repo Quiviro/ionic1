@@ -16,6 +16,8 @@ export class ModalPage {
     if(this.navParams.get('tarea'))
     {
       this.tarea = this.navParams.get('tarea');
+      this.titulo = "Actualiza tarea";
+      this.boton = "Aplica cambios";
     }
   }
 
@@ -37,4 +39,7 @@ export class ModalPage {
     this.viewCtrl.dismiss(this.tarea);
     
   }
+
+  public titulo:string = "Nueva tarea";
+  public boton:string = "Añade tarea"
 }

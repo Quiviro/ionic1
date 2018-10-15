@@ -94,9 +94,9 @@ export class AboutPage {
     const modal = this.modCtrl.create(ModalPage, {tarea});
     modal.present();
     // modal.onDidDismiss();
-    let posicion = this.tareas.indexOf(tarea);
+/*     let posicion = this.tareas.indexOf(tarea);
     console.log(posicion);
-    console.log(tarea); 
+    console.log(tarea);  */
   }
 
 }

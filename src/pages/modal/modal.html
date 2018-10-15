@@ -1,9 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Tarea Nueva</ion-title>
+    
+    <ion-title>{{titulo}}</ion-title>
     <button ion-button (click)="cierreModal()" >
-      <ion-icon name="close" >
-        
+      <ion-icon name="arrow-back" >
+          <span showWhen="ios">Back</span>
       </ion-icon>
     </button>
   </ion-toolbar>
@@ -30,7 +31,7 @@
         </ion-checkbox>
       </ion-item>
       <!-- el botón se activará cuando haya algo escrito -->
-      <button ion-button [disabled]="!estadoCampo.valid" type="submit">Añadir tarea</button>
+      <button ion-button [disabled]="!estadoCampo.valid" type="submit">{{boton}}</button>
     </form>
   </ion-list>
 </ion-content>

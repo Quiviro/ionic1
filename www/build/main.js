@@ -251,18 +251,17 @@ var AboutPage = (function () {
         var modal = this.modCtrl.create(__WEBPACK_IMPORTED_MODULE_2__modal_modal__["a" /* ModalPage */], { tarea: tarea });
         modal.present();
         // modal.onDidDismiss();
-        var posicion = this.tareas.indexOf(tarea);
-        console.log(posicion);
-        console.log(tarea);
+        /*     let posicion = this.tareas.indexOf(tarea);
+            console.log(posicion);
+            console.log(tarea);  */
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-about',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Tareas\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <ion-item-sliding *ngFor = \'let tarea of tareas\'>\n      <ion-item ion-item [ngStyle]=\'estiloNuevo(tarea)\'>\n        <ion-label>{{tarea.descripcion}}</ion-label>\n        <ion-checkbox [checked]="tarea.realizada" (click)="comprobar(tarea)"></ion-checkbox>\n        <!-- <ion-checkbox [checked]="tarea.importante"></ion-checkbox> -->\n      </ion-item>\n      <ion-item-options side="right">\n        <button ion-button color="micolor" margin (click)="borrarTarea(tarea)">\n          <ion-icon name="trash"></ion-icon>\n        </button>\n         &nbsp; &nbsp;\n        <button ion-button color="micolor" margin (click)="actualizarTarea(tarea)">\n          <ion-icon name="folder-open"></ion-icon>\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n  <ion-fab right bottom (click)="nuevaTarea()">\n    <button ion-fab color="danger">\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]])
     ], AboutPage);
     return AboutPage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=about.js.map
@@ -525,9 +524,13 @@ var ModalPage = (function () {
         this.navParams = navParams;
         this.viewCtrl = viewCtrl;
         this.tarea = new __WEBPACK_IMPORTED_MODULE_2__servicios_TareaModelo__["a" /* TareaModelo */]("");
+        this.titulo = "Nueva tarea";
+        this.boton = "Añade tarea";
         // navParams sirve para recoger valores de variables de otras páginas
         if (this.navParams.get('tarea')) {
             this.tarea = this.navParams.get('tarea');
+            this.titulo = "Actualiza tarea";
+            this.boton = "Aplica cambios";
         }
     }
     ModalPage.prototype.ionViewDidLoad = function () {
@@ -543,12 +546,11 @@ var ModalPage = (function () {
     };
     ModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-modal',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/modal/modal.html"*/`<ion-header>\n  <ion-toolbar>\n    <ion-title>Tarea Nueva</ion-title>\n    <button ion-button (click)="cierreModal()" >\n      <ion-icon name="close" >\n        \n      </ion-icon>\n    </button>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <form (ngSubmit)=\'enviarTarea()\'>\n      <ion-item>\n        <ion-input clearInput placeholder="Añada tarea..." name="descripcion" required [(ngModel)]="tarea.descripcion" #estadoCampo=\'ngModel\'>\n          {{tarea.descripcion}}\n        </ion-input>\n      </ion-item>\n      <!-- voy a mirar las clases que incluye ionic por sí mismo\n      si no hay nada escrito, muestra el mensaje de advertencia -->\n      <ion-item [hidden]=\'estadoCampo.valid || estadoCampo.untouched\'>\n        Campo obligatorio\n      </ion-item>\n      <ion-item>\n        <ion-label>¿Es importante?</ion-label>\n        <ion-checkbox [(ngModel)]="tarea.importante" name="importante">\n          {{tarea.importante}}\n        </ion-checkbox>\n      </ion-item>\n      <!-- el botón se activará cuando haya algo escrito -->\n      <button ion-button [disabled]="!estadoCampo.valid" type="submit">Añadir tarea</button>\n    </form>\n  </ion-list>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/modal/modal.html"*/,
+            selector: 'page-modal',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/modal/modal.html"*/`<ion-header>\n  <ion-toolbar>\n    \n    <ion-title>{{titulo}}</ion-title>\n    <button ion-button (click)="cierreModal()" >\n      <ion-icon name="arrow-back" >\n          <span showWhen="ios">Back</span>\n      </ion-icon>\n    </button>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <form (ngSubmit)=\'enviarTarea()\'>\n      <ion-item>\n        <ion-input clearInput placeholder="Añada tarea..." name="descripcion" required [(ngModel)]="tarea.descripcion" #estadoCampo=\'ngModel\'>\n          {{tarea.descripcion}}\n        </ion-input>\n      </ion-item>\n      <!-- voy a mirar las clases que incluye ionic por sí mismo\n      si no hay nada escrito, muestra el mensaje de advertencia -->\n      <ion-item [hidden]=\'estadoCampo.valid || estadoCampo.untouched\'>\n        Campo obligatorio\n      </ion-item>\n      <ion-item>\n        <ion-label>¿Es importante?</ion-label>\n        <ion-checkbox [(ngModel)]="tarea.importante" name="importante">\n          {{tarea.importante}}\n        </ion-checkbox>\n      </ion-item>\n      <!-- el botón se activará cuando haya algo escrito -->\n      <button ion-button [disabled]="!estadoCampo.valid" type="submit">{{boton}}</button>\n    </form>\n  </ion-list>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/modal/modal.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]])
     ], ModalPage);
     return ModalPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=modal.js.map
