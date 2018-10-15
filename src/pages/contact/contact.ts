@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @Component({
   selector: 'page-contact',
@@ -10,7 +11,7 @@ export class ContactPage {
 
   public base64Image:string;
 
-  constructor(public navCtrl: NavController, private camera: Camera) {
+  constructor(public navCtrl: NavController, private camera: Camera, private geolocation: Geolocation) {
 
   }
 
@@ -30,6 +31,24 @@ export class ContactPage {
     }, (err) => {
      // Handle error
     });
+  }
+
+  localizar()
+  {
+    this.geolocation.getCurrentPosition().then((resp) => {
+      // resp.coords.latitude
+      // resp.coords.longitude
+      console.log(resp);
+     }).catch((error) => {
+       console.log('Error getting location', error);
+     });
+     
+     let watch = this.geolocation.watchPosition();
+     watch.subscribe((data) => {
+      // data can be a set of coordinates, or an error (if an error occurred).
+      // data.coords.latitude
+      // data.coords.longitude
+     });
   }
   
 

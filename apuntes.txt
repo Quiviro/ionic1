@@ -93,3 +93,7 @@ ionic cordova plugin add cordova-plugin-camera
 npm install --save @ionic-native/camera
 (después hay que añadirlo manualmente en app.module.ts, import y providers)
 
+Geolocalización
+https://ionicframework.com/docs/native/geolocation/
+
+

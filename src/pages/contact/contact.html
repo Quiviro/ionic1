@@ -6,18 +6,21 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item text-center>
-      
+<ion-content text-center>
+    <ion-item>
+      Sonríe
       <button ion-button secondary (click)="foto()">
-        <ion-icon name="camera" item-start >
-
-        </ion-icon>
+        <ion-icon name="camera"></ion-icon>
       </button>
-        Sonríe
+        
     </ion-item>
-  </ion-list>
   <img [src]='base64Image'>
+
+  <ion-item>
+      Mapa
+    <button ion-button (click)="localizar()" style="margin: auto">
+      
+      <ion-icon name="map" ></ion-icon>
+    </button>
+  </ion-item>
 </ion-content>
