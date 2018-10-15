@@ -8,14 +8,10 @@ gradle.org
 
 ionic cordova platform add android/ios/windows
 sudo ionic cordova build android/ios/windows
-
 ionic cordova platform remove android/ios/windows
 
 Interfaz gráfica para control de versiones git + GitHub
 https://desktop.github.com
-
-Animaciones CSS
-https://daneden.github.io/animate.css/
 
 
 Posibles soluciones a construcción APK
@@ -57,18 +53,18 @@ Para abrir el fichero
 
 Configuración de variables. 
   
-  export JAVA_HOME=$(/ruta donde se encuentre instalado)
+  export JAVA_HOME=$(/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home)
   export PATH=${JAVA_HOME}/bin:$PATH
-  export ANDROID_HOME= ruta donee se encuentre instalado
+  export ANDROID_HOME=/Users/Dev2/Library/Android/sdk
   export PATH=$ANDROID_HOME/platform-tools:$PATH
   export PATH=$ANDROID_HOME/tools:$PATH
-  export GRADLE_HOME=ruta donde se encuentre instalado
+  export GRADLE_HOME=/Users/Dev2/Documents/gradle
   export PATH=$PATH:$GRADLE_HOME/bin
 
 Para ejecutar el fichero, 
 
 source ~/.bash_profile
-
+************************************************************
 
 CalculAppdora
 
@@ -86,4 +82,3 @@ Android Studio:
 Xcode:
   carpeta ".../platform/ios"
 
-  
