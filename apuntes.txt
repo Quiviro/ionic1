@@ -85,3 +85,6 @@ Xcode:
 En esta ruta guarda la compilación
 /platforms/android/app/build/outputs/apk/debug/app-debug.apk
 
+Si conectas el móvil con USB...
+ionic cordova rum --device
+

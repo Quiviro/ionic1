@@ -12,6 +12,11 @@ import { TareaModelo } from "../../servicios/TareaModelo";
 export class ModalPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+    // navParams sirve para recoger valores de variables de otras páginas
+    if(this.navParams.get('tarea'))
+    {
+      this.tarea = this.navParams.get('tarea');
+    }
   }
 
   ionViewDidLoad() {

@@ -91,6 +91,9 @@ export class AboutPage {
   {
     // el modal crea tareas, pero quiero modificar una ya creada
     // this.navCtrl.push(ModalPage);
+    const modal = this.modCtrl.create(ModalPage, {tarea});
+    modal.present();
+    // modal.onDidDismiss();
     let posicion = this.tareas.indexOf(tarea);
     console.log(posicion);
     console.log(tarea); 
