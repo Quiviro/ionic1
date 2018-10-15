@@ -19,25 +19,56 @@ https://daneden.github.io/animate.css/
 
 
 Posibles soluciones a construcción APK
-IOS:
+solución IOS.
 
-  1. sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
-  2. ionic cordova platform add ios
-  3. ionic cordova build ios
+1. sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+2. Ionic cordova platform add ios
+3. Ionic cordova build ios
 
-Android:
+solución para Android, 
 
-  1. acceder a fichero gradle.wapper.properties
+1. acceder a fichero gradle.wapper.properties
 
-  modificar variable, distributionUrl --> poned la distribucción solicitada en el error, 
+modificar variable, distributionUrl --> poned la distribucción solicitada en el error, 
 
-  distributionUrl=\https\://services.gradle.org/distributions/gradle-4.1-rc-1-all.zip
+distributionUrl=\https\://services.gradle.org/distributions/gradle-4.1-rc-1-all.zip
 
-  2. acceder a fichero build.gradle y modificar la dependencia de gradle. 
+2. acceder a fichero build.gradle y modificar la dependencia de gradle. 
 
-  dependencies {
-          classpath 'com.android.tools.build:gradle:3.0.0-beta4'
-      }
+dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0-beta4'
+    }
+
+[project name]/platforms/android/cordova/lib/builders/GradleBuilder.js 
+
+
+
+
+******************************************
+
+Para crear el fichero, 
+
+	touch ~/.bash_profile
+
+Para abrir el fichero
+
+	open -a	TextEdit ~/.bash_profile
+
+
+Configuración de variables. 
+  
+  export JAVA_HOME=$(/ruta donde se encuentre instalado)
+  export PATH=${JAVA_HOME}/bin:$PATH
+  export ANDROID_HOME= ruta donee se encuentre instalado
+  export PATH=$ANDROID_HOME/platform-tools:$PATH
+  export PATH=$ANDROID_HOME/tools:$PATH
+  export GRADLE_HOME=ruta donde se encuentre instalado
+  export PATH=$PATH:$GRADLE_HOME/bin
+
+Para ejecutar el fichero, 
+
+source ~/.bash_profile
+
 
 CalculAppdora
 
