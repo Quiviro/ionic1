@@ -88,3 +88,8 @@ En esta ruta guarda la compilación
 Si conectas el móvil con USB...
 ionic cordova rum --device
 
+Instalar plugin para acceder a la cámara
+ionic cordova plugin add cordova-plugin-camera
+npm install --save @ionic-native/camera
+(después hay que añadirlo manualmente en app.module.ts, import y providers)
+
