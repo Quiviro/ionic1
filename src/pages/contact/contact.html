@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Realiza foto
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,9 +9,15 @@
 <ion-content>
   <ion-list>
     <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+    <ion-item text-center>
+      
+      <button ion-button secondary (click)="foto()">
+        <ion-icon name="camera" item-start >
+
+        </ion-icon>
+      </button>
+        Sonríe
     </ion-item>
   </ion-list>
+  <img [src]='base64Image'>
 </ion-content>
