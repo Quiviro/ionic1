@@ -1,6 +1,5 @@
 git init
-git add *
-git commit -m "mensaje"
+git commit -am "mensaje" (añade archivos a seguimiento y guarda los cambios)
 git remote add origin https://github.com/Quiviro/ionic1.git
 git push -u origin master
 
@@ -81,4 +80,8 @@ Android Studio:
   carpeta ".../platform/android"
 Xcode:
   carpeta ".../platform/ios"
+
+*****************************
+En esta ruta guarda la compilación
+/platforms/android/app/build/outputs/apk/debug/app-debug.apk
 
