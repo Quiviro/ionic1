@@ -87,6 +87,7 @@ En esta ruta guarda la compilación
 
 Si conectas el móvil con USB...
 ionic cordova rum --device
+(en windows hace un build automático)
 
 Instalar plugin para acceder a la cámara
 ionic cordova plugin add cordova-plugin-camera
@@ -96,4 +97,7 @@ npm install --save @ionic-native/camera
 Geolocalización
 https://ionicframework.com/docs/native/geolocation/
 
+
+developers.google.com
+https://developers.google.com/maps/documentation/javascript/get-api-key
 

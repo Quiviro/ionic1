@@ -9,7 +9,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 })
 export class ContactPage {
 
-  public base64Image:string;
+  base64Image:any;
 
   constructor(public navCtrl: NavController, private camera: Camera, private geolocation: Geolocation) {
 
