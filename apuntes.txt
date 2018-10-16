@@ -8,6 +8,7 @@ gradle.org
 ionic cordova platform add android/ios/windows
 sudo ionic cordova build android/ios/windows
 ionic cordova platform remove android/ios/windows
+ionic cordova platform rm android
 
 Interfaz gráfica para control de versiones git + GitHub
 https://desktop.github.com
@@ -101,4 +102,7 @@ https://ionicframework.com/docs/native/geolocation/
 developers.google.com
 https://developers.google.com/maps/documentation/javascript/get-api-key
 
-ionic cordova build android --prod --release – -- --minSdkVersion=19
+https://github.com/ionic-team/ionic-native-google-maps/blob/master/documents/README.md
+
+ionic cordova plugin remove nombre_del_plugin
+
