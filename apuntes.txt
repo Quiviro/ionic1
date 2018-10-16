@@ -101,3 +101,4 @@ https://ionicframework.com/docs/native/geolocation/
 developers.google.com
 https://developers.google.com/maps/documentation/javascript/get-api-key
 
+ionic cordova build android --prod --release – -- --minSdkVersion=19
