@@ -14,7 +14,7 @@
       </button>
         
     </ion-item>
-  <img [src]='base64Image'>
+  <img *ngIf="base64Image" [src]='base64Image'>
 
   <ion-item>
       Mapa
