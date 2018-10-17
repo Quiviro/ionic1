@@ -1,4 +1,4 @@
-#Wed Oct 17 19:07:05 CEST 2018
+#Wed Oct 17 20:31:22 CEST 2018
 base.0=/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

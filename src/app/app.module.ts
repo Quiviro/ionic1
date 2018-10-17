@@ -16,6 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Camera } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { IonicStorageModule } from '@ionic/storage';
 import { ServiciotareaProvider } from '../servicios/serviciotarea';
@@ -56,6 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Camera,
     Geolocation,
+    GoogleMaps,
     ServiciotareaProvider
   ]
 })

@@ -114,3 +114,6 @@ ionic g
 Creamos servicio proveedor.
 Instalamos plugin nativo storage (get + set).
 Todas las funciones de la lista de tareas se realizarán desde serviciotarea.ts
+
+En los archivos, por estructura, se suelen colocar las variables antes del constructor y las funciones después.
+
