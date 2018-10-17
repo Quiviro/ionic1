@@ -8,7 +8,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding *ngFor = 'let tarea of ServiciotareaProvider.tareas'>
+    <ion-item-sliding *ngFor = 'let tarea of this.servicioTarea.tareas'>
       <ion-item ion-item [ngStyle]='estiloNuevo(tarea)'>
         <ion-label>{{tarea.descripcion}}</ion-label>
         <ion-checkbox [checked]="tarea.realizada" (click)="comprobar(tarea)"></ion-checkbox>
