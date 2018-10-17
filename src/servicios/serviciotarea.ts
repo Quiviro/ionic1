@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { TareaModelo } from './TareaModelo'
+import { TareaModelo } from './TareaModelo';
+import { ModalPage } from '../pages/modal/modal';
+import { ModalController } from 'ionic-angular';
 
 
 /*
@@ -16,7 +18,8 @@ export class ServiciotareaProvider {
   public tareas:TareaModelo[] = [];
 
   constructor(public http: HttpClient,
-    private storage: Storage) {
+    private storage: Storage,
+    public modCtrl: ModalController) {
     this.dameLista();
   }
 
@@ -65,6 +68,17 @@ export class ServiciotareaProvider {
       this.tareas.splice(indice, 1);
       this.salvarLocal();
     }
+  }
+
+  public updateTarea(tarea:TareaModelo)
+  {
+    // el modal crea tareas, pero quiero modificar una ya creada
+    // this.navCtrl.push(ModalPage);
+    const modal = this.modCtrl.create(ModalPage, {tarea});
+    modal.present();
+    this.salvarLocal();
+    // modal.onDidDismiss();
+
   }
 
 }

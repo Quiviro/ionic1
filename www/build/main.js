@@ -245,14 +245,7 @@ var AboutPage = (function () {
         }
     };
     AboutPage.prototype.actualizarTarea = function (tarea) {
-        // el modal crea tareas, pero quiero modificar una ya creada
-        // this.navCtrl.push(ModalPage);
-        var modal = this.modCtrl.create(__WEBPACK_IMPORTED_MODULE_2__modal_modal__["a" /* ModalPage */], { tarea: tarea });
-        modal.present();
-        // modal.onDidDismiss();
-        /*     let posicion = this.tareas.indexOf(tarea);
-            console.log(posicion);
-            console.log(tarea);  */
+        this.servicioTarea.updateTarea(tarea);
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -277,6 +270,8 @@ var AboutPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TareaModelo__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_modal_modal__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -290,6 +285,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /*
   Generated class for the ServiciotareaProvider provider.
 
@@ -297,9 +294,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
   and Angular DI.
 */
 var ServiciotareaProvider = (function () {
-    function ServiciotareaProvider(http, storage) {
+    function ServiciotareaProvider(http, storage, modCtrl) {
         this.http = http;
         this.storage = storage;
+        this.modCtrl = modCtrl;
         this.tareas = [];
         this.dameLista();
     }
@@ -338,12 +336,20 @@ var ServiciotareaProvider = (function () {
             this.salvarLocal();
         }
     };
+    ServiciotareaProvider.prototype.updateTarea = function (tarea) {
+        // el modal crea tareas, pero quiero modificar una ya creada
+        // this.navCtrl.push(ModalPage);
+        var modal = this.modCtrl.create(__WEBPACK_IMPORTED_MODULE_4__pages_modal_modal__["a" /* ModalPage */], { tarea: tarea });
+        modal.present();
+        this.salvarLocal();
+        // modal.onDidDismiss();
+    };
     ServiciotareaProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* ModalController */]) === "function" && _c || Object])
     ], ServiciotareaProvider);
     return ServiciotareaProvider;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=serviciotarea.js.map

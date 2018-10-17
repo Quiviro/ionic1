@@ -89,14 +89,7 @@ export class AboutPage {
 
   actualizarTarea(tarea:TareaModelo)
   {
-    // el modal crea tareas, pero quiero modificar una ya creada
-    // this.navCtrl.push(ModalPage);
-    const modal = this.modCtrl.create(ModalPage, {tarea});
-    modal.present();
-    // modal.onDidDismiss();
-/*     let posicion = this.tareas.indexOf(tarea);
-    console.log(posicion);
-    console.log(tarea);  */
+    this.servicioTarea.updateTarea(tarea);
   }
 
 }
