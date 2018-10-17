@@ -33,8 +33,8 @@ export class ContactPage {
     this.platform.ready().then(() => {
       this.map = this.gooMapa.create('map_canvas');
       this.map.one(GoogleMapsEvent.MAP_READY).then((data:any) => {
-        this.geolocation.getCurrentPosition().then(pos => {
-          let miPosicion = new LatLng(pos.coords.latitude,pos.coords.longitude);
+        this.geolocation.getCurrentPosition().then(resp => {
+          let miPosicion = new LatLng(resp.coords.latitude,resp.coords.longitude);
           this.map.animateCamera({target:miPosicion, zoom:4});
           this.map.addMarker({position:miPosicion, title:'Ubicación'});
         });
