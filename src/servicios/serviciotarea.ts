@@ -74,10 +74,14 @@ export class ServiciotareaProvider {
   {
     // el modal crea tareas, pero quiero modificar una ya creada
     // this.navCtrl.push(ModalPage);
-    const modal = this.modCtrl.create(ModalPage, {tarea});
+    const modal = this.modCtrl.create(ModalPage, {tarea:tarea});
     modal.present();
-    this.salvarLocal();
-    // modal.onDidDismiss();
+    modal.onDidDismiss(tarea => {
+      if(tarea)
+      {
+        this.salvarLocal();
+      }
+    });
 
   }
 

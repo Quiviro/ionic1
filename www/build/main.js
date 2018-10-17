@@ -337,12 +337,16 @@ var ServiciotareaProvider = (function () {
         }
     };
     ServiciotareaProvider.prototype.updateTarea = function (tarea) {
+        var _this = this;
         // el modal crea tareas, pero quiero modificar una ya creada
         // this.navCtrl.push(ModalPage);
         var modal = this.modCtrl.create(__WEBPACK_IMPORTED_MODULE_4__pages_modal_modal__["a" /* ModalPage */], { tarea: tarea });
         modal.present();
-        this.salvarLocal();
-        // modal.onDidDismiss();
+        modal.onDidDismiss(function (tarea) {
+            if (tarea) {
+                _this.salvarLocal();
+            }
+        });
     };
     ServiciotareaProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
