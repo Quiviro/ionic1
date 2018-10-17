@@ -63,6 +63,7 @@ export class ServiciotareaProvider {
     {
       // cambio el array quitando un elemento a partir de la posición 'índice'
       this.tareas.splice(indice, 1);
+      this.salvarLocal();
     }
   }
 
