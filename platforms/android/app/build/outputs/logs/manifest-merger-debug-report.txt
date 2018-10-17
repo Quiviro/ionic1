@@ -1,15 +1,29 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+MERGED from [:tbxml-android:] /private/var/root/.gradle/caches/transforms-1/files-1.1/tbxml-android.aar/2c33e02d072a68e309a0791746612052/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/2f64371423d9bd11d37c7dad224c2e96/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/d02f7b3de114476c981842131f195f03/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/aa85cb9eb4da01468b5b1b81417f67c2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/95130b672d7202cf604c1c3172cd0fcf/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f7c1bd2d5f8d6705e5ffde97960790f9/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2499c198cb264d2c78e883538a806b7e/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9b1070919920f01a329980f1ba6e2386/AndroidManifest.xml:17:1-22:12
 MERGED from [:CordovaLib] /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
-INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4498a988b5c53bd5b96b8e440fa73c07/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/edd32107fe279d1cd1e74f5b18e238f4/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:27.1.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/88a90709f707c111557039e2239b3fe5/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/af89341093eadb94c7356d3ca062d955/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
 	package
-		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:98-124
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:98-122
 		INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -19,7 +33,7 @@ INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/p
 	android:hardwareAccelerated
 		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:125-183
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:123-181
 	android:versionCode
 		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:2:46-69
 		INJECTED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml
@@ -40,10 +54,32 @@ ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/plat
 		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:3:23-48
 uses-permission#android.permission.INTERNET
 ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:5:5-12:19
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:5:5-14:19
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/2f64371423d9bd11d37c7dad224c2e96/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/2f64371423d9bd11d37c7dad224c2e96/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/d02f7b3de114476c981842131f195f03/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/d02f7b3de114476c981842131f195f03/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/aa85cb9eb4da01468b5b1b81417f67c2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/aa85cb9eb4da01468b5b1b81417f67c2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/95130b672d7202cf604c1c3172cd0fcf/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/95130b672d7202cf604c1c3172cd0fcf/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f7c1bd2d5f8d6705e5ffde97960790f9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f7c1bd2d5f8d6705e5ffde97960790f9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2499c198cb264d2c78e883538a806b7e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2499c198cb264d2c78e883538a806b7e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4498a988b5c53bd5b96b8e440fa73c07/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4498a988b5c53bd5b96b8e440fa73c07/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/edd32107fe279d1cd1e74f5b18e238f4/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/edd32107fe279d1cd1e74f5b18e238f4/AndroidManifest.xml:25:5-29:19
 	android:supportsRtl
 		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:5:114-140
 	android:label
@@ -52,7 +88,7 @@ ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/plat
 		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:5:18-52
 	android:icon
 		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:5:53-80
-activity#io.ionic.starter.MainActivity
+activity#q.ionic.ionic1.MainActivity
 ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
 	android:label
 		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:6:97-134
@@ -78,11 +114,105 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:9:17-77
 	android:name
 		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:9:27-74
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:12:9-124
+	android:value
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:12:66-121
+	android:name
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:12:20-65
+meta-data#com.google.android.gms.version
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:13:9-122
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/95130b672d7202cf604c1c3172cd0fcf/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/95130b672d7202cf604c1c3172cd0fcf/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:13:66-119
+	android:name
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:13:20-65
 uses-sdk
-ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:13:5-74
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:15:5-74
+MERGED from [:tbxml-android:] /private/var/root/.gradle/caches/transforms-1/files-1.1/tbxml-android.aar/2c33e02d072a68e309a0791746612052/AndroidManifest.xml:7:5-9:41
+MERGED from [:tbxml-android:] /private/var/root/.gradle/caches/transforms-1/files-1.1/tbxml-android.aar/2c33e02d072a68e309a0791746612052/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/2f64371423d9bd11d37c7dad224c2e96/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/2f64371423d9bd11d37c7dad224c2e96/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/d02f7b3de114476c981842131f195f03/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/d02f7b3de114476c981842131f195f03/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/aa85cb9eb4da01468b5b1b81417f67c2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/aa85cb9eb4da01468b5b1b81417f67c2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/95130b672d7202cf604c1c3172cd0fcf/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/95130b672d7202cf604c1c3172cd0fcf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f7c1bd2d5f8d6705e5ffde97960790f9/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f7c1bd2d5f8d6705e5ffde97960790f9/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2499c198cb264d2c78e883538a806b7e/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2499c198cb264d2c78e883538a806b7e/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:27.1.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9b1070919920f01a329980f1ba6e2386/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9b1070919920f01a329980f1ba6e2386/AndroidManifest.xml:20:5-44
 MERGED from [:CordovaLib] /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [com.android.support:support-media-compat:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4498a988b5c53bd5b96b8e440fa73c07/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4498a988b5c53bd5b96b8e440fa73c07/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/edd32107fe279d1cd1e74f5b18e238f4/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/edd32107fe279d1cd1e74f5b18e238f4/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:27.1.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/88a90709f707c111557039e2239b3fe5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/88a90709f707c111557039e2239b3fe5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/af89341093eadb94c7356d3ca062d955/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/af89341093eadb94c7356d3ca062d955/AndroidManifest.xml:20:5-44
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f7c1bd2d5f8d6705e5ffde97960790f9/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:13:42-71
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:15:42-71
 	android:minSdkVersion
-		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:13:15-41
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:15:15-41
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:16:5-79
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:16:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:17:5-81
+	android:name
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:17:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:18:5-79
+	android:name
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:18:22-76
+uses-feature#0x00020000
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:26:5-28:35
+MERGED from [com.google.android.gms:play-services-maps:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.1.aar/fe1d046247ad93ac70e0d152b664b103/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:19:19-51
+	android:required
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:19:52-75
+uses-feature#android.hardware.location
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:20:5-62
+	android:name
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:20:19-59
+uses-feature#android.hardware.location.gps
+ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from /Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/AndroidManifest.xml:21:19-63
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/AndroidManifest.xml:24:13-79
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f7c1bd2d5f8d6705e5ffde97960790f9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2499c198cb264d2c78e883538a806b7e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2499c198cb264d2c78e883538a806b7e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4498a988b5c53bd5b96b8e440fa73c07/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4498a988b5c53bd5b96b8e440fa73c07/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/edd32107fe279d1cd1e74f5b18e238f4/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/edd32107fe279d1cd1e74f5b18e238f4/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v4:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f7c1bd2d5f8d6705e5ffde97960790f9/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v4:26.1.0] /private/var/root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f7c1bd2d5f8d6705e5ffde97960790f9/AndroidManifest.xml:27:13-51

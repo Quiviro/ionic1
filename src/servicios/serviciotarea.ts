@@ -73,8 +73,7 @@ export class ServiciotareaProvider {
   public updateTarea(tarea:TareaModelo)
   {
     // el modal crea tareas, pero quiero modificar una ya creada
-    // this.navCtrl.push(ModalPage);
-    const modal = this.modCtrl.create(ModalPage, {tarea:tarea});
+    const modal = this.modCtrl.create(ModalPage, {tarea});
     modal.present();
     modal.onDidDismiss(tarea => {
       if(tarea)

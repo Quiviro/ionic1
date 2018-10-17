@@ -12,15 +12,20 @@
       <button ion-button secondary (click)="foto()">
         <ion-icon name="camera"></ion-icon>
       </button>
-        
     </ion-item>
+    <ion-item>
+      Mostrar foto
+      <button ion-button secondary (click)="mostrarFoto()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-item>
+
   <img *ngIf="base64Image" src='{{base64Image}}'>
 
-  <ion-item>
+  <ion-item text-center>
       Mapa
-    <button ion-button (click)="localizar()" style="margin: auto">
-      
-      <ion-icon name="map" ></ion-icon>
+    <button ion-button (click)="localizar()" [ngStyle]="{'display': 'block', 'margin': 'auto'}">
+    <ion-icon name="map" ></ion-icon>
     </button>
   </ion-item>
 </ion-content>

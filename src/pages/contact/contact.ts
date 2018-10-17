@@ -10,6 +10,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 export class ContactPage {
 
   base64Image:any;
+  muestraFoto:any;
 
   constructor(public navCtrl: NavController, private camera: Camera, private geolocation: Geolocation) {
 
@@ -30,6 +31,24 @@ export class ContactPage {
      // imageData is either a base64 encoded string or a file URI
      // If it's base64 (DATA_URL):
      this.base64Image = 'data:image/jpeg;base64,' + imageData;
+    }, (err) => {
+     // Handle error
+    });
+  }
+
+  mostrarFoto()
+  {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      saveToPhotoAlbum: false,
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+    }
+    
+    this.camera.getPicture(options).then((imageData) => {
+     // imageData is either a base64 encoded string or a file URI
+     // If it's base64 (DATA_URL):
+     this.muestraFoto = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
      // Handle error
     });
