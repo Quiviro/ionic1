@@ -106,3 +106,6 @@ https://github.com/ionic-team/ionic-native-google-maps/blob/master/documents/REA
 
 ionic cordova plugin remove nombre_del_plugin
 
+Vamos a intentar almacenar variables localmente
+https://ionicframework.com/docs/storage/
+
