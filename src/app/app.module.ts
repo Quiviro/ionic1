@@ -18,6 +18,7 @@ import { Camera } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
 
 import { IonicStorageModule } from '@ionic/storage';
+import { ServiciotareaProvider } from '../servicios/serviciotarea';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { IonicStorageModule } from '@ionic/storage';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Camera,
-    Geolocation
+    Geolocation,
+    ServiciotareaProvider
   ]
 })
 export class AppModule {}
