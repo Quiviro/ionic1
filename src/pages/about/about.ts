@@ -69,15 +69,10 @@ export class AboutPage {
     return estilos;
   }
 
-/*   borrarTarea(tarea:TareaModelo)
+  borrarTarea(tarea:TareaModelo)
   {
-    let indice = this.tareas.indexOf(tarea);
-    if(indice > -1)
-    {
-      // cambio el array quitando un elemento a partir de la posición 'índice'
-      this.tareas.splice(indice, 1);
-    }
-  } */
+    this.servicioTarea.removeTarea(tarea);
+  }
 
   comprobar(tarea:TareaModelo)
   {
