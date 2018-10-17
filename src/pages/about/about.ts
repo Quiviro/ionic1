@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { ModalPage } from "../modal/modal";
 import { TareaModelo } from '../../servicios/TareaModelo';
+import { ServiciotareaProvider} from '../../servicios/serviciotarea';
 
 @Component({
   selector: 'page-about',
@@ -9,15 +10,18 @@ import { TareaModelo } from '../../servicios/TareaModelo';
 })
 export class AboutPage {
 
-  public tareas:TareaModelo[];
+  // public tareas:TareaModelo[];
 
-  constructor(public navCtrl: NavController, public modCtrl: ModalController) {
+  constructor(
+    public navCtrl: NavController, 
+    public modCtrl: ModalController,
+    public servicioTarea: ServiciotareaProvider ) {
 
   }
 
   ionViewDidLoad()
   {
-    this.tareas = [
+    /* this.tareas = [
       new TareaModelo("Compras"),
       new TareaModelo("Deporte", true),
       new TareaModelo("Trabajo"),
@@ -26,7 +30,7 @@ export class AboutPage {
       new TareaModelo("Ejercicio", true ),
       new TareaModelo("Departamento Q", true, true),
       new TareaModelo("Entrenar", true)
-    ];
+    ]; */
   }
 
   nuevaTarea()
@@ -44,7 +48,8 @@ export class AboutPage {
 
   anadeTarea(tarea:TareaModelo)
   {
-    this.tareas.push(tarea);
+    this.servicioTarea.addTarea(tarea);
+    this.servicioTarea.salvarLocal();
   }
 
   estiloNuevo(tarea:TareaModelo)
@@ -64,7 +69,7 @@ export class AboutPage {
     return estilos;
   }
 
-  borrarTarea(tarea:TareaModelo)
+/*   borrarTarea(tarea:TareaModelo)
   {
     let indice = this.tareas.indexOf(tarea);
     if(indice > -1)
@@ -72,7 +77,7 @@ export class AboutPage {
       // cambio el array quitando un elemento a partir de la posición 'índice'
       this.tareas.splice(indice, 1);
     }
-  }
+  } */
 
   comprobar(tarea:TareaModelo)
   {
