@@ -111,3 +111,6 @@ https://ionicframework.com/docs/storage/
 
 ionic g
 
+Creamos servicio proveedor.
+Instalamos plugin nativo storage (get + set).
+Todas las funciones de la lista de tareas se realizarán desde serviciotarea.ts

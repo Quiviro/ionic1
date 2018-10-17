@@ -19,6 +19,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 import { IonicStorageModule } from '@ionic/storage';
 import { ServiciotareaProvider } from '../servicios/serviciotarea';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ServiciotareaProvider } from '../servicios/serviciotarea';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    HttpClient
   ],
   bootstrap: [IonicApp],
   entryComponents: [
