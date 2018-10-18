@@ -45,5 +45,17 @@ export class HomePage {
         );
     
   }
-
+  registro()
+  {
+    this.autFire.auth.createUserWithEmailAndPassword(
+      this.user.email, 
+      this.user.pass).then(() => 
+      {
+        alert("usuario registrado");
+        // this.navCtrl.push(PrivadoPage);
+      }).catch(error =>
+        console.log(error)
+        );
+    
+  }
 }
