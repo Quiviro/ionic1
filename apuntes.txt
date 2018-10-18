@@ -121,3 +121,6 @@ github.com/angular/angularfire2
 
 Como hacer conexión de un usuario
 
+
+Fuera del tema del curso:
+socialpubli.com

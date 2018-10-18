@@ -484,6 +484,7 @@ var ContactPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__segundaa_pagina_segundaa_pagina__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal_modal__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_fire_auth__ = __webpack_require__(719);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -497,10 +498,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = (function () {
-    function HomePage(navCtrl, modalCtrl) {
+    function HomePage(navCtrl, modalCtrl, autFire) {
         this.navCtrl = navCtrl;
         this.modalCtrl = modalCtrl;
+        this.autFire = autFire;
+        this.user = {
+            email: '',
+            pass: ''
+        };
     }
     HomePage.prototype.primeraFuncion = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_1__segundaa_pagina_segundaa_pagina__["a" /* SegundaaPaginaPage */]);
@@ -509,13 +516,15 @@ var HomePage = (function () {
         var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__modal_modal__["a" /* ModalPage */]);
         modal.present();
     };
+    HomePage.prototype.acceso = function () { };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/home/home.html"*/`<ion-header>\n  <ion-navbar color="micolor">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Botoneando again</h2>\n  <p>\n    <button ion-button color="micolor" round (click)=\'primeraFuncion()\'>\n      NIN\n    </button>\n    <button ion-button color="light">Light</button>\n    <button ion-button>Default</button>\n    <button ion-button color="secondary">\n      3\n      <ion-icon name="home" (click)="presentModal()"></ion-icon>\n      Q\n    </button>\n    <button ion-button color="danger">Danger</button>\n    <button ion-button color="dark">Dark</button>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/home/home.html"*/`<ion-header>\n  <ion-navbar color="micolor">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Botoneando</h2>\n  <p>\n    <button ion-button color="micolor" round (click)=\'primeraFuncion()\'>\n      NIN\n    </button>\n    <button ion-button color="light">Light</button>\n    <button ion-button>Default</button>\n    <button ion-button color="secondary">\n      3\n      <ion-icon name="home" (click)="presentModal()"></ion-icon>\n      Q\n    </button>\n    <button ion-button color="danger">Danger</button>\n    <button ion-button color="dark">Dark</button>\n  </p>\n  <br>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input type="text" [(ngModel)]=\'user.email\'></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Contraseña</ion-label>\n      <ion-input type="password" [(ngModel)]=\'user.pass\'></ion-input>\n    </ion-item>\n    <button ion-button (click)=\'acceso()\'>Login</button>\n  </ion-list>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* ModalController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* ModalController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_fire_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_fire_auth__["a" /* AngularFireAuth */]) === "function" && _c || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -540,7 +549,6 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export firebaseConfig */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
@@ -561,9 +569,6 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_storage__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__servicios_serviciotarea__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_common_http__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_fire__ = __webpack_require__(314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_fire_database__ = __webpack_require__(709);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_fire_auth__ = __webpack_require__(719);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -589,18 +594,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-
-// credenciales de Firebase
-var firebaseConfig = {
-    apiKey: "AIzaSyBqV6WaG2DBv4mEdvL5AZOamA5HOL_8Ygs",
-    authDomain: "q-conex-fuego.firebaseapp.com",
-    databaseURL: "https://q-conex-fuego.firebaseio.com",
-    projectId: "q-conex-fuego",
-    storageBucket: "q-conex-fuego.appspot.com",
-    messagingSenderId: "629939915754"
-};
 var AppModule = (function () {
     function AppModule() {
     }
@@ -626,10 +619,7 @@ var AppModule = (function () {
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_16__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_18__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_19__angular_fire__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
-                __WEBPACK_IMPORTED_MODULE_20__angular_fire_database__["b" /* AngularFireDatabaseModule */],
-                __WEBPACK_IMPORTED_MODULE_21__angular_fire_auth__["a" /* AngularFireAuthModule */]
+                __WEBPACK_IMPORTED_MODULE_18__angular_common_http__["b" /* HttpClientModule */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
@@ -645,12 +635,11 @@ var AppModule = (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
-                __WEBPACK_IMPORTED_MODULE_20__angular_fire_database__["a" /* AngularFireDatabase */],
+                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_13__ionic_native_camera__["a" /* Camera */],
                 __WEBPACK_IMPORTED_MODULE_14__ionic_native_geolocation__["a" /* Geolocation */],
                 __WEBPACK_IMPORTED_MODULE_15__ionic_native_google_maps__["a" /* GoogleMaps */],
-                __WEBPACK_IMPORTED_MODULE_17__servicios_serviciotarea__["a" /* ServiciotareaProvider */],
-                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
+                __WEBPACK_IMPORTED_MODULE_17__servicios_serviciotarea__["a" /* ServiciotareaProvider */]
             ]
         })
     ], AppModule);
