@@ -39,9 +39,10 @@ export class HomePage {
       this.user.pass).then(() => 
       {
         console.log("usuario");
-        this.navCtrl.push(PrivadoPage);
+        // this.navCtrl.push(PrivadoPage);
+        this.navCtrl.setRoot(PrivadoPage);
       }).catch(error =>
-        console.log(error)
+        alert(error)
         );
     
   }
@@ -51,10 +52,10 @@ export class HomePage {
       this.user.email, 
       this.user.pass).then(() => 
       {
-        alert("usuario registrado");
+        alert("Usuario registrado correctamente");
         // this.navCtrl.push(PrivadoPage);
       }).catch(error =>
-        console.log(error)
+        alert(error)
         );
     
   }
