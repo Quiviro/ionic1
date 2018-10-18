@@ -34,17 +34,16 @@ export class HomePage {
 
   acceso()
   {
-    if(this.autFire.auth.signInWithEmailAndPassword(
+    this.autFire.auth.signInWithEmailAndPassword(
       this.user.email, 
-      this.user.pass))
-    {
-      console.log("usuario");
-      this.navCtrl.push(PrivadoPage);
-    }
-    else
-    {
-      console.log("nadie");
-    }
+      this.user.pass).then(() => 
+      {
+        console.log("usuario");
+        this.navCtrl.push(PrivadoPage);
+      }).catch(error =>
+        console.log(error)
+        );
+    
   }
 
 }
