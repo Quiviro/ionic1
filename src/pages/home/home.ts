@@ -3,6 +3,7 @@ import { SegundaaPaginaPage } from '../segundaa-pagina/segundaa-pagina';
 import { NavController, ModalController } from 'ionic-angular';
 import { ModalPage } from "../modal/modal";
 import { AngularFireAuth } from '@angular/fire/auth';
+import { PrivadoPage } from '../privado/privado';
 
 @Component({
   selector: 'page-home',
@@ -10,7 +11,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class HomePage {
 
-  public user = {
+  // privado para acceder sólo desde esta página
+  private user = {
     email:'',
     pass:''
   }
@@ -31,6 +33,18 @@ export class HomePage {
   }
 
   acceso()
-  {}
+  {
+    if(this.autFire.auth.signInWithEmailAndPassword(
+      this.user.email, 
+      this.user.pass))
+    {
+      console.log("usuario");
+      this.navCtrl.push(PrivadoPage);
+    }
+    else
+    {
+      console.log("nadie");
+    }
+  }
 
 }

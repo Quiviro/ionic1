@@ -124,3 +124,6 @@ Como hacer conexión de un usuario
 
 Fuera del tema del curso:
 socialpubli.com
+
+VS Code tiene una opción de autocompletar las etiquetas de ionic en HTML
+

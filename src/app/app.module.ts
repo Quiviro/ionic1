@@ -10,6 +10,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { PrimeraPaginaPage } from '../pages/primera-pagina/primera-pagina';
 import { SegundaaPaginaPage } from '../pages/segundaa-pagina/segundaa-pagina';
 import { ModalPage } from "../pages/modal/modal";
+import { PrivadoPage } from '../pages/privado/privado';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -45,7 +46,8 @@ export const firebaseConfig = {
     TabsPage,
     PrimeraPaginaPage,
     SegundaaPaginaPage,
-    ModalPage
+    ModalPage,
+    PrivadoPage
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,8 @@ export const firebaseConfig = {
     TabsPage,
     PrimeraPaginaPage,
     SegundaaPaginaPage,
-    ModalPage
+    ModalPage,
+    PrivadoPage
   ],
   providers: [
     StatusBar,
