@@ -8,15 +8,15 @@
 
 <ion-content text-center>
     <ion-item>
-      Sonríe
-      <button ion-button secondary (click)="foto()">
-        <ion-icon name="camera"></ion-icon>
+      
+      <button large ion-button secondary (click)="foto()">
+        <ion-icon name="camera"></ion-icon>&nbsp;Sonríe
       </button>
     </ion-item>
     <ion-item>
       Mostrar foto
-      <button ion-button secondary (click)="mostrarFoto()">
-        <ion-icon name="close"></ion-icon>
+      <button large ion-button secondary (click)="mostrarFoto()">
+        <ion-icon name="image"></ion-icon>
       </button>
     </ion-item>
 
@@ -25,7 +25,7 @@
 
   <ion-item text-center>
       Mapa
-    <button ion-button (click)="localizar()" [ngStyle]="{'display': 'block', 'margin': 'auto'}">
+    <button large ion-button (click)="localizar()" [ngStyle]="{'display': 'block', 'margin': 'auto'}">
     <ion-icon name="map" ></ion-icon>
     </button>
   </ion-item>

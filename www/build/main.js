@@ -401,8 +401,8 @@ var ContactPage = (function () {
         this.platform.ready().then(function () {
             _this.map = _this.gooMapa.create('map_canvas');
             _this.map.one(__WEBPACK_IMPORTED_MODULE_4__ionic_native_google_maps__["b" /* GoogleMapsEvent */].MAP_READY).then(function (data) {
-                _this.geolocation.getCurrentPosition().then(function (pos) {
-                    var miPosicion = new __WEBPACK_IMPORTED_MODULE_4__ionic_native_google_maps__["c" /* LatLng */](pos.coords.latitude, pos.coords.longitude);
+                _this.geolocation.getCurrentPosition().then(function (resp) {
+                    var miPosicion = new __WEBPACK_IMPORTED_MODULE_4__ionic_native_google_maps__["c" /* LatLng */](resp.coords.latitude, resp.coords.longitude);
                     _this.map.animateCamera({ target: miPosicion, zoom: 4 });
                     _this.map.addMarker({ position: miPosicion, title: 'Ubicación' });
                 });
@@ -460,7 +460,7 @@ var ContactPage = (function () {
     };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/contact/contact.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Realiza foto\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content text-center>\n    <ion-item>\n      Sonríe\n      <button ion-button secondary (click)="foto()">\n        <ion-icon name="camera"></ion-icon>\n      </button>\n    </ion-item>\n    <ion-item>\n      Mostrar foto\n      <button ion-button secondary (click)="mostrarFoto()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-item>\n\n  <img *ngIf="base64Image" src=\'{{base64Image}}\'>\n  <img *ngIf="muestraFoto" src=\'{{base64Image}}\'>\n\n  <ion-item text-center>\n      Mapa\n    <button ion-button (click)="localizar()" [ngStyle]="{\'display\': \'block\', \'margin\': \'auto\'}">\n    <ion-icon name="map" ></ion-icon>\n    </button>\n  </ion-item>\n  <div id="map_canvas"></div>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/contact/contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/contact/contact.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Realiza foto\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content text-center>\n    <ion-item>\n      \n      <button large ion-button secondary (click)="foto()">\n        <ion-icon name="camera"></ion-icon>&nbsp;Sonríe\n      </button>\n    </ion-item>\n    <ion-item>\n      Mostrar foto\n      <button large ion-button secondary (click)="mostrarFoto()">\n        <ion-icon name="image"></ion-icon>\n      </button>\n    </ion-item>\n\n  <img *ngIf="base64Image" src=\'{{base64Image}}\'>\n  <img *ngIf="muestraFoto" src=\'{{base64Image}}\'>\n\n  <ion-item text-center>\n      Mapa\n    <button large ion-button (click)="localizar()" [ngStyle]="{\'display\': \'block\', \'margin\': \'auto\'}">\n    <ion-icon name="map" ></ion-icon>\n    </button>\n  </ion-item>\n  <div id="map_canvas"></div>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/contact/contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */],
@@ -540,6 +540,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export firebaseConfig */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
@@ -560,6 +561,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_storage__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__servicios_serviciotarea__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_common_http__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_fire__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_fire_database__ = __webpack_require__(709);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_fire_auth__ = __webpack_require__(719);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -585,6 +589,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+var firebaseConfig = {
+    apiKey: "xxxxxxxxxx",
+    authDomain: "your-domain-name.firebaseapp.com",
+    databaseURL: "https://your-domain-name.firebaseio.com",
+    storageBucket: "your-domain-name.appspot.com",
+    messagingSenderId: '<your-messaging-sender-id>'
+};
 var AppModule = (function () {
     function AppModule() {
     }
@@ -610,7 +624,10 @@ var AppModule = (function () {
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_16__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_18__angular_common_http__["b" /* HttpClientModule */]
+                __WEBPACK_IMPORTED_MODULE_18__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_19__angular_fire__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
+                __WEBPACK_IMPORTED_MODULE_20__angular_fire_database__["b" /* AngularFireDatabaseModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_fire_auth__["a" /* AngularFireAuthModule */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
@@ -626,11 +643,12 @@ var AppModule = (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_20__angular_fire_database__["a" /* AngularFireDatabase */],
                 __WEBPACK_IMPORTED_MODULE_13__ionic_native_camera__["a" /* Camera */],
                 __WEBPACK_IMPORTED_MODULE_14__ionic_native_geolocation__["a" /* Geolocation */],
                 __WEBPACK_IMPORTED_MODULE_15__ionic_native_google_maps__["a" /* GoogleMaps */],
-                __WEBPACK_IMPORTED_MODULE_17__servicios_serviciotarea__["a" /* ServiciotareaProvider */]
+                __WEBPACK_IMPORTED_MODULE_17__servicios_serviciotarea__["a" /* ServiciotareaProvider */],
+                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
             ]
         })
     ], AppModule);
