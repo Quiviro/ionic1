@@ -592,12 +592,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// credenciales de Firebase
 var firebaseConfig = {
-    apiKey: "xxxxxxxxxx",
-    authDomain: "your-domain-name.firebaseapp.com",
-    databaseURL: "https://your-domain-name.firebaseio.com",
-    storageBucket: "your-domain-name.appspot.com",
-    messagingSenderId: '<your-messaging-sender-id>'
+    apiKey: "AIzaSyBqV6WaG2DBv4mEdvL5AZOamA5HOL_8Ygs",
+    authDomain: "q-conex-fuego.firebaseapp.com",
+    databaseURL: "https://q-conex-fuego.firebaseio.com",
+    projectId: "q-conex-fuego",
+    storageBucket: "q-conex-fuego.appspot.com",
+    messagingSenderId: "629939915754"
 };
 var AppModule = (function () {
     function AppModule() {
