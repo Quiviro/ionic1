@@ -5,6 +5,10 @@ import { TareaModelo } from './TareaModelo';
 import { ModalPage } from '../pages/modal/modal';
 import { ModalController } from 'ionic-angular';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 
 /*
   Generated class for the ServiciotareaProvider provider.
@@ -19,8 +23,9 @@ export class ServiciotareaProvider {
 
   constructor(public http: HttpClient,
     private storage: Storage,
-    public modCtrl: ModalController) {
-    this.dameLista();
+    public modCtrl: ModalController,
+    public afd:AngularFireDatabase) {
+    this.dameLista()
   }
 
   private dameLista()
@@ -57,6 +62,8 @@ export class ServiciotareaProvider {
   public addTarea(tarea:TareaModelo)
   {
     this.tareas.push(tarea);
+    // acude a la lista de tareas
+    this.afd.list('/tareas/').push(tarea);
   }
 
   public removeTarea(tarea:TareaModelo)

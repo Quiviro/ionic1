@@ -128,5 +128,7 @@ socialpubli.com
 VS Code tiene una opción de autocompletar las etiquetas de ionic en HTML
 
 En Firebase hay un tipo nuevo de base de datos (Cloud Firestore) que permite sincronizar los datos locales con la base de datos cuando recupera la conexión a red.
-enablePersistence()
+AngularFirestoreModule.enablePersistence()
+
+Google Allo: app que convierte tu foto en un dibujo muy chulo para usar como avatar o icono (aunque Google ya la está dejando morir).
 
