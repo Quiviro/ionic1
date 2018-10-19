@@ -132,3 +132,8 @@ AngularFirestoreModule.enablePersistence()
 
 Google Allo: app que convierte tu foto en un dibujo muy chulo para usar como avatar o icono (aunque Google ya la está dejando morir).
 
+
+En /src/resources se guardan los iconos (externos) de la aplicación
+En /src/assets se guardan los archivos internos de la aplicación (comenzando por el favicon)
+
+El nombre de la aplicación se cambia en config.xml

@@ -63,7 +63,17 @@ export class ServiciotareaProvider {
   {
     this.tareas.push(tarea);
     // acude a la lista de tareas
+    // y graba la nueva tarea como registro en Realtime Database
     this.afd.list('/tareas/').push(tarea);
+  }
+
+  public introduceLocal()
+  {
+    // revisa lo que tiene en local y luego lo sube a Firebase
+    // aunque este método no es fiable 100%
+    for (let i = 0; i < this.tareas.length; i++) {
+      this.afd.list('/tareas/').push(this.tareas[i]);      
+    }
   }
 
   public removeTarea(tarea:TareaModelo)

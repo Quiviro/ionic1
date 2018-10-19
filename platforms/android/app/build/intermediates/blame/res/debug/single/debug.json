@@ -32,24 +32,24 @@
         "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4498a988b5c53bd5b96b8e440fa73c07/res/layout/notification_template_media.xml"
     },
     {
-        "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
-        "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/88a90709f707c111557039e2239b3fe5/res/layout-v21/notification_template_custom_big.xml"
+        "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable_dummy_mylocation_button_shadow.xml.flat",
+        "source": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/res/drawable/dummy_mylocation_button_shadow.xml"
     },
     {
         "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_dark.xml.flat",
         "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/res/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable_dummy_mylocation_button_shadow.xml.flat",
-        "source": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/res/drawable/dummy_mylocation_button_shadow.xml"
-    },
-    {
-        "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
-        "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/res/drawable-xhdpi-v4/common_full_open_on_phone.png"
+        "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
+        "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/88a90709f707c111557039e2239b3fe5/res/layout-v21/notification_template_custom_big.xml"
     },
     {
         "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/layout_notification_template_lines_media.xml.flat",
         "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4498a988b5c53bd5b96b8e440fa73c07/res/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
+        "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/res/drawable-xhdpi-v4/common_full_open_on_phone.png"
     },
     {
         "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
@@ -68,12 +68,12 @@
         "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/88a90709f707c111557039e2239b3fe5/res/drawable-hdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-ldpi_screen.png.flat",
-        "source": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png"
-    },
-    {
         "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-ldpi_screen.png.flat",
+        "source": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png"
     },
     {
         "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
@@ -172,12 +172,12 @@
         "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/88a90709f707c111557039e2239b3fe5/res/drawable/notification_bg_low.xml"
     },
     {
-        "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_dark_focused.xml.flat",
-        "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/res/drawable/common_google_signin_btn_text_dark_focused.xml"
-    },
-    {
         "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_common_full_open_on_phone.png.flat",
         "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/res/drawable-hdpi-v4/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_dark_focused.xml.flat",
+        "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/645b01bc759d9428b67aed3825954b1d/res/drawable/common_google_signin_btn_text_dark_focused.xml"
     },
     {
         "merged": "/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/platforms/android/app/build/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
