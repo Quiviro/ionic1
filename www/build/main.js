@@ -112,15 +112,15 @@ webpackEmptyAsyncContext.id = 174;
 
 var map = {
 	"../pages/modal/modal.module": [
-		722,
+		724,
 		3
 	],
 	"../pages/primera-pagina/primera-pagina.module": [
-		723,
+		722,
 		2
 	],
 	"../pages/privado/privado.module": [
-		724,
+		723,
 		1
 	],
 	"../pages/segundaa-pagina/segundaa-pagina.module": [
@@ -716,9 +716,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/modal/modal.module#ModalPageModule', name: 'ModalPage', segment: 'modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/primera-pagina/primera-pagina.module#PrimeraPaginaPageModule', name: 'PrimeraPaginaPage', segment: 'primera-pagina', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/privado/privado.module#PrivadoPageModule', name: 'PrivadoPage', segment: 'privado', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/modal/modal.module#ModalPageModule', name: 'ModalPage', segment: 'modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/segundaa-pagina/segundaa-pagina.module#SegundaaPaginaPageModule', name: 'SegundaaPaginaPage', segment: 'segundaa-pagina', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -907,7 +907,7 @@ var SegundaaPaginaPage = (function () {
     };
     SegundaaPaginaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-segundaa-pagina',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/segundaa-pagina/segundaa-pagina.html"*/`<!--\n  Generated template for the SegundaaPaginaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Nine Inch Nails</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <img src="../../assets/imgs/nin-live.png"/>\n    <ion-card-content>\n      <ion-card-title>\n        Nine Inch Nails Live\n      </ion-card-title>\n      <p>\n        The most popular industrial group ever, and largely\n        responsible for bringing the music to a mass audience.\n      </p>\n      <br>\n      <ion-list>\n          <button ion-item *ngFor = \'let tarea of tareas\'>\n            <ion-icon name="{{tarea.icono}}" item-start \n            [ngStyle]="{\'color\':tarea.color}" ></ion-icon>\n            {{tarea.titulo}}\n          </button>\n      \n        </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/segundaa-pagina/segundaa-pagina.html"*/,
+            selector: 'page-segundaa-pagina',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/segundaa-pagina/segundaa-pagina.html"*/`<!--\n  Generated template for the SegundaaPaginaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Nine Inch Nails</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <img src="assets/imgs/nin-live.png"/>\n    <ion-card-content>\n      <ion-card-title>\n        Nine Inch Nails Live\n      </ion-card-title>\n      <p>\n        The most popular industrial group ever, and largely\n        responsible for bringing the music to a mass audience.\n      </p>\n      <br>\n      <ion-list>\n          <button ion-item *ngFor = \'let tarea of tareas\'>\n            <ion-icon name="{{tarea.icono}}" item-start \n            [ngStyle]="{\'color\':tarea.color}" ></ion-icon>\n            {{tarea.titulo}}\n          </button>\n      \n        </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/segundaa-pagina/segundaa-pagina.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], SegundaaPaginaPage);

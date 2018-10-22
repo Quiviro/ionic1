@@ -137,3 +137,9 @@ En /src/resources se guardan los iconos (externos) de la aplicación
 En /src/assets se guardan los archivos internos de la aplicación (comenzando por el favicon)
 
 El nombre de la aplicación se cambia en config.xml
+
+La ruta de las imágenes debe comenzar directamente con la carpeta assets, sin respetar la ruta relativa normal:
+  <img src="assets/imgs/nin-live.png"/> 
+
+Vamos a desinstalar Firebase para actualizar la versión nueva:
+  sudo npm uninstall firebase angularfire2 --save
