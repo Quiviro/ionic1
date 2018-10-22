@@ -8,6 +8,7 @@
 
 <ion-content padding>
   <ion-list>
+    <!-- <ion-item-sliding *ngFor = 'let tarea of this.servicioTarea.tareas'> -->
     <ion-item-sliding *ngFor = 'let tarea of this.servicioTarea.observador'>
       <ion-item ion-item [ngStyle]='estiloNuevo(tarea)'>
         <ion-label>{{tarea.descripcion}}</ion-label>
