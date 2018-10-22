@@ -143,3 +143,7 @@ La ruta de las imágenes debe comenzar directamente con la carpeta assets, sin r
 
 Vamos a desinstalar Firebase para actualizar la versión nueva:
   sudo npm uninstall firebase angularfire2 --save
+Creamos una colección en la base de datos, mediante la consola de Firebase
+Instalamos la última versión
+  sudo npm install --save firebase@latest angularfire2@latest
+
