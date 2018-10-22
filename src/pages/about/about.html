@@ -11,7 +11,7 @@
     <!-- <ion-item-sliding *ngFor = 'let tarea of this.servicioTarea.tareas'> -->
     <ion-item-sliding *ngFor = 'let tarea of this.servicioTarea.observador'>
       <ion-item ion-item [ngStyle]='estiloNuevo(tarea)'>
-        <ion-label>{{tarea.descripcion}}</ion-label>
+        <ion-label>{{tarea.descripcion}} (<small>{{tarea.id}}</small>)</ion-label>
         <ion-checkbox [checked]="tarea.realizada" (click)="comprobar(tarea)"></ion-checkbox>
         <!-- <ion-checkbox [checked]="tarea.importante"></ion-checkbox> -->
       </ion-item>

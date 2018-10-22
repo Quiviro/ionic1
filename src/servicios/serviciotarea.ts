@@ -83,6 +83,11 @@ export class ServiciotareaProvider {
     // acude a la lista de tareas
     // y graba la nueva tarea como registro en Realtime Database
     // this.afd.list('/tareas/').push(tarea);
+    this.afd.collection('tareas').add({
+      descripcion: tarea.descripcion,
+      importante: tarea.importante,
+      realizada: tarea.realizada
+    });
   }
 
   public introduceLocal()
