@@ -298,7 +298,7 @@ var AboutPage = (function () {
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Tareas\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <ion-item-sliding *ngFor = \'let tarea of this.servicioTarea.tareas\'>\n      <ion-item ion-item [ngStyle]=\'estiloNuevo(tarea)\'>\n        <ion-label>{{tarea.descripcion}}</ion-label>\n        <ion-checkbox [checked]="tarea.realizada" (click)="comprobar(tarea)"></ion-checkbox>\n        <!-- <ion-checkbox [checked]="tarea.importante"></ion-checkbox> -->\n      </ion-item>\n      <ion-item-options side="right">\n        <button ion-button color="micolor" margin (click)="borrarTarea(tarea)">\n          <ion-icon name="trash"></ion-icon>\n        </button>\n         &nbsp; &nbsp;\n        <button ion-button color="micolor" margin (click)="actualizarTarea(tarea)">\n          <ion-icon name="folder-open"></ion-icon>\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n  <ion-fab right bottom (click)="nuevaTarea()">\n    <button ion-fab color="danger">\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Tareas\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <ion-item-sliding *ngFor = \'let tarea of this.servicioTarea.observador\'>\n      <ion-item ion-item [ngStyle]=\'estiloNuevo(tarea)\'>\n        <ion-label>{{tarea.descripcion}}</ion-label>\n        <ion-checkbox [checked]="tarea.realizada" (click)="comprobar(tarea)"></ion-checkbox>\n        <!-- <ion-checkbox [checked]="tarea.importante"></ion-checkbox> -->\n      </ion-item>\n      <ion-item-options side="right">\n        <button ion-button color="micolor" margin (click)="borrarTarea(tarea)">\n          <ion-icon name="trash"></ion-icon>\n        </button>\n         &nbsp; &nbsp;\n        <button ion-button color="micolor" margin (click)="actualizarTarea(tarea)">\n          <ion-icon name="folder-open"></ion-icon>\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n  <ion-fab right bottom (click)="nuevaTarea()">\n    <button ion-fab color="danger">\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */],
@@ -322,7 +322,8 @@ var AboutPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TareaModelo__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_modal_modal__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_fire_database__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_firestore__ = __webpack_require__(731);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_firestore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angularfire2_firestore__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -338,6 +339,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+// import { AngularFireAuthModule } from '@angular/fire/auth';
 
 /*
   Generated class for the ServiciotareaProvider provider.
@@ -347,11 +351,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 */
 var ServiciotareaProvider = (function () {
     function ServiciotareaProvider(http, storage, modCtrl, afd) {
+        var _this = this;
         this.http = http;
         this.storage = storage;
         this.modCtrl = modCtrl;
         this.afd = afd;
         this.tareas = [];
+        this.coleccion = this.afd.collection('tareas');
+        this.coleccion.snapshotChanges().subscribe(function (listaTareas) {
+            _this.observador = listaTareas.map(function (item) {
+                return {
+                    descripcion: item.payload.doc.data().descripcion,
+                    importante: item.payload.doc.data().importante,
+                    realizada: item.payload.doc.data().realizada,
+                    id: item.payload.doc.id
+                };
+            });
+        });
         this.dameLista();
     }
     ServiciotareaProvider.prototype.dameLista = function () {
@@ -412,7 +428,7 @@ var ServiciotareaProvider = (function () {
     };
     ServiciotareaProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* ModalController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_fire_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_fire_database__["a" /* AngularFireDatabase */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* ModalController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6_angularfire2_firestore__["AngularFirestore"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_angularfire2_firestore__["AngularFirestore"]) === "function" && _d || Object])
     ], ServiciotareaProvider);
     return ServiciotareaProvider;
     var _a, _b, _c, _d;

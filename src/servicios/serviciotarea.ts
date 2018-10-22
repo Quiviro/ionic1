@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { TareaModelo } from './TareaModelo';
 import { ModalPage } from '../pages/modal/modal';
-import { ModalController } from 'ionic-angular';
+import { ModalController, Item } from 'ionic-angular';
 
 // import { AngularFireModule } from '@angular/fire';
 // import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
@@ -24,12 +24,24 @@ export class ServiciotareaProvider {
   public tareas:TareaModelo[] = [];
 
   public coleccion: AngularFirestoreCollection<TareaModelo>;
-  public observador: TareaModelo[];
+  // antes recorría la matriz de "Tareas", ahora será la matriz "observador"
+  public observador:TareaModelo[];
 
   constructor(public http: HttpClient,
     private storage: Storage,
     public modCtrl: ModalController,
     public afd:AngularFirestore) {
+      this.coleccion = this.afd.collection('tareas');
+      this.coleccion.snapshotChanges().subscribe(listaTareas => {
+        this.observador = listaTareas.map(item => {
+          return {
+            descripcion: item.payload.doc.data().descripcion,
+            importante: item.payload.doc.data().importante,
+            realizada: item.payload.doc.data().realizada,
+            id: item.payload.doc.id
+          }
+        })
+      })
     this.dameLista()
   }
 
