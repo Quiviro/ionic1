@@ -148,3 +148,6 @@ Instalamos la última versión
   sudo npm install --save firebase@latest angularfire2@latest
 Hay que instalar compatibilidad con las versiones nuevas de Angular
   sudo npm install rxjs@6 rxjs-compat@6 promise-polyfill --save
+
+Para actualizar a través del modal, hay que pasarle un array con el valor de la tarea y su id
+

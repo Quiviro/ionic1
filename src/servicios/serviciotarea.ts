@@ -99,7 +99,7 @@ export class ServiciotareaProvider {
     }
   } */
 
-  public removeTarea(tarea:TareaModelo)
+  public removeTarea(tarea)
   {
     // LOCAL
     let indice = this.tareas.indexOf(tarea);
