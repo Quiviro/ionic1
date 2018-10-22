@@ -40,8 +40,8 @@ export class ServiciotareaProvider {
             realizada: item.payload.doc.data().realizada,
             id: item.payload.doc.id
           }
-        })
-      })
+        });
+      });
     this.dameLista()
   }
 
@@ -66,6 +66,7 @@ export class ServiciotareaProvider {
         this.tareas = tareaLocal;
       });
     });
+    console.log(this.tareas);
   }
 
   public salvarLocal()
@@ -81,7 +82,7 @@ export class ServiciotareaProvider {
     this.tareas.push(tarea);
     // acude a la lista de tareas
     // y graba la nueva tarea como registro en Realtime Database
-    this.afd.list('/tareas/').push(tarea);
+    // this.afd.list('/tareas/').push(tarea);
   }
 
   public introduceLocal()
@@ -89,7 +90,7 @@ export class ServiciotareaProvider {
     // revisa lo que tiene en local y luego lo sube a Firebase
     // aunque este método no es fiable 100%
     for (let i = 0; i < this.tareas.length; i++) {
-      this.afd.list('/tareas/').push(this.tareas[i]);      
+      // this.afd.list('/tareas/').push(this.tareas[i]);      
     }
   }
 

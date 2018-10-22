@@ -1,6 +1,6 @@
 export class TareaModelo
 {
-  toLowerCase:any;
+  // toLowerCase:any;
   constructor (
     public descripcion:string,
     public importante:boolean = false,
