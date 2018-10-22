@@ -5,9 +5,11 @@ import { TareaModelo } from './TareaModelo';
 import { ModalPage } from '../pages/modal/modal';
 import { ModalController } from 'ionic-angular';
 
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+// import { AngularFireAuthModule } from '@angular/fire/auth';
+
+import { AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
 
 
 /*
@@ -21,10 +23,13 @@ export class ServiciotareaProvider {
 
   public tareas:TareaModelo[] = [];
 
+  public coleccion: AngularFirestoreCollection<TareaModelo>;
+  public observador: TareaModelo[];
+
   constructor(public http: HttpClient,
     private storage: Storage,
     public modCtrl: ModalController,
-    public afd:AngularFireDatabase) {
+    public afd:AngularFirestore) {
     this.dameLista()
   }
 
