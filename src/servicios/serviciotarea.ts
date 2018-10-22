@@ -87,20 +87,21 @@ export class ServiciotareaProvider {
       descripcion: tarea.descripcion,
       importante: tarea.importante,
       realizada: tarea.realizada
-    });
+    }).then();
   }
 
-  public introduceLocal()
+ /*  public introduceLocal()
   {
     // revisa lo que tiene en local y luego lo sube a Firebase
     // aunque este método no es fiable 100%
     for (let i = 0; i < this.tareas.length; i++) {
-      // this.afd.list('/tareas/').push(this.tareas[i]);      
+      this.afd.list('/tareas/').push(this.tareas[i]);      
     }
-  }
+  } */
 
   public removeTarea(tarea:TareaModelo)
   {
+    // LOCAL
     let indice = this.tareas.indexOf(tarea);
     if(indice > -1)
     {
@@ -108,6 +109,8 @@ export class ServiciotareaProvider {
       this.tareas.splice(indice, 1);
       this.salvarLocal();
     }
+    // FIREBASE
+    this.afd.doc(`tareas/${tarea.id}`).delete().then();
   }
 
   public updateTarea(tarea:TareaModelo)

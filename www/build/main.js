@@ -405,22 +405,26 @@ var ServiciotareaProvider = (function () {
             descripcion: tarea.descripcion,
             importante: tarea.importante,
             realizada: tarea.realizada
-        });
+        }).then();
     };
-    ServiciotareaProvider.prototype.introduceLocal = function () {
-        // revisa lo que tiene en local y luego lo sube a Firebase
-        // aunque este método no es fiable 100%
-        for (var i = 0; i < this.tareas.length; i++) {
-            // this.afd.list('/tareas/').push(this.tareas[i]);      
-        }
-    };
+    /*  public introduceLocal()
+     {
+       // revisa lo que tiene en local y luego lo sube a Firebase
+       // aunque este método no es fiable 100%
+       for (let i = 0; i < this.tareas.length; i++) {
+         this.afd.list('/tareas/').push(this.tareas[i]);
+       }
+     } */
     ServiciotareaProvider.prototype.removeTarea = function (tarea) {
+        // LOCAL
         var indice = this.tareas.indexOf(tarea);
         if (indice > -1) {
             // cambio el array quitando un elemento a partir de la posición 'índice'
             this.tareas.splice(indice, 1);
             this.salvarLocal();
         }
+        // FIREBASE
+        this.afd.doc("tareas/" + tarea.id).delete().then();
     };
     ServiciotareaProvider.prototype.updateTarea = function (tarea) {
         var _this = this;
