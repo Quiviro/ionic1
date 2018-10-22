@@ -151,3 +151,5 @@ Hay que instalar compatibilidad con las versiones nuevas de Angular
 
 Para actualizar a través del modal, hay que pasarle un array con el valor de la tarea y su id
 
+angelma83
+

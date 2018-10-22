@@ -127,4 +127,10 @@ export class ServiciotareaProvider {
 
   }
 
+  // public actualiza(tarea)
+  // {
+  //   this.afd.doc(`tareas/${tarea.id}`).update().then();
+  // }
+
+
 }

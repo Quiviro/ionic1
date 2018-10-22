@@ -32,6 +32,10 @@
       </ion-item>
       <!-- el botón se activará cuando haya algo escrito -->
       <button ion-button [disabled]="!estadoCampo.valid" type="submit">{{boton}}</button>
+
+      <!-- hecho por Ángel -->
+      <button type="submit" *ngIf="" (click)='enviar()'>Añade tarea</button>
+      <button type="submit" *ngIf="" (click)='actualiza()'>Añade tarea</button>
     </form>
   </ion-list>
 </ion-content>
