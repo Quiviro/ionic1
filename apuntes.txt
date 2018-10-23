@@ -160,3 +160,9 @@ https://firebase.google.com/docs/auth/web/start
 Flexbox
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+Binding de doble sentido, para asignar un valor introducido por el usuario
+[(ngModel)]='variable'
+
+Un = para asignación.
+Dos == para comparación.
+
