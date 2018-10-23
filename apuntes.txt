@@ -153,3 +153,6 @@ Para actualizar a través del modal, hay que pasarle un array con el valor de la
 
 angelma83
 
+Guardar inicio de sesión de usuarios
+https://firebase.google.com/docs/auth/web/start
+...
