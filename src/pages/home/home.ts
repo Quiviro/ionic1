@@ -71,6 +71,7 @@ export class HomePage {
       if (user) {
         // User is signed in.
         console.log("usuario con acceso");
+        console.log(user.email);
 /*         var displayName = user.displayName;
         var email = user.email;
         var emailVerified = user.emailVerified;
@@ -84,6 +85,18 @@ export class HomePage {
         console.log("no hay sesión iniciada");
         // ...
       }
+    });
+  }
+
+  borraUsuario()
+  {
+    var user = this.autFire.auth.currentUser;
+    user.delete().then(function() {
+      // User deleted.
+      console.log("usuario eliminado");
+    }).catch(function(error) {
+      // An error happened.
+      console.log("error ocurrido");
     });
   }
 }
