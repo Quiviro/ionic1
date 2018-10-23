@@ -602,6 +602,10 @@ var HomePage = (function () {
             pass: ''
         };
     }
+    // esto se ejecuta al cargar la página
+    HomePage.prototype.ionViewDidLoad = function () {
+        this.compruebaLogin();
+    };
     HomePage.prototype.primeraFuncion = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_1__segundaa_pagina_segundaa_pagina__["a" /* SegundaaPaginaPage */]);
     };
@@ -631,17 +635,19 @@ var HomePage = (function () {
         this.autFire.auth.onAuthStateChanged(function (user) {
             if (user) {
                 // User is signed in.
-                var displayName = user.displayName;
-                var email = user.email;
-                var emailVerified = user.emailVerified;
-                var photoURL = user.photoURL;
-                var isAnonymous = user.isAnonymous;
-                var uid = user.uid;
-                var providerData = user.providerData;
+                console.log("usuario con acceso");
+                /*         var displayName = user.displayName;
+                        var email = user.email;
+                        var emailVerified = user.emailVerified;
+                        var photoURL = user.photoURL;
+                        var isAnonymous = user.isAnonymous;
+                        var uid = user.uid;
+                        var providerData = user.providerData; */
                 // ...
             }
             else {
                 // User is signed out.
+                console.log("no hay sesión iniciada");
                 // ...
             }
         });

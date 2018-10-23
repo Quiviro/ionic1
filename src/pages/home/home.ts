@@ -22,6 +22,12 @@ export class HomePage {
     public autFire:AngularFireAuth){
   }
 
+  // esto se ejecuta al cargar la página
+  ionViewDidLoad()
+  {
+    this.compruebaLogin();
+  }
+
   primeraFuncion()
   {
     this.navCtrl.push(SegundaaPaginaPage);
@@ -61,19 +67,21 @@ export class HomePage {
 
   compruebaLogin()
   {
-    this.autFire.auth.onAuthStateChanged(function(user) {
+    this.autFire.auth.onAuthStateChanged(user => {
       if (user) {
         // User is signed in.
-        var displayName = user.displayName;
+        console.log("usuario con acceso");
+/*         var displayName = user.displayName;
         var email = user.email;
         var emailVerified = user.emailVerified;
         var photoURL = user.photoURL;
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
-        var providerData = user.providerData;
+        var providerData = user.providerData; */
         // ...
       } else {
         // User is signed out.
+        console.log("no hay sesión iniciada");
         // ...
       }
     });
