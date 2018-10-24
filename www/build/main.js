@@ -34,7 +34,7 @@ var PrimeraPaginaPage = (function () {
     };
     PrimeraPaginaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-primera-pagina',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/primera-pagina/primera-pagina.html"*/`<!--\n  Generated template for the PrimeraPaginaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Bicister</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <h1>Las bicicletas son para el verano</h1>\n  <p>\n    En invierno llueve y pasas mucho frío.\n  </p>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/primera-pagina/primera-pagina.html"*/,
+            selector: 'page-primera-pagina',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/primera-pagina/primera-pagina.html"*/`<!--\n  Generated template for the PrimeraPaginaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-toolbar color="micolor">\n    <ion-title>Bicister</ion-title>\n    <ion-buttons>\n      <button ion-button>\n        <ion-icon name="unlock"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <h1>Las bicicletas son para el verano</h1>\n  <p>\n    En invierno llueve y pasas mucho frío.\n  </p>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/primera-pagina/primera-pagina.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], PrimeraPaginaPage);
@@ -636,7 +636,7 @@ var HomePage = (function () {
             if (user) {
                 // User is signed in.
                 console.log("usuario con acceso");
-                console.log("user");
+                console.log(user.email);
                 /*         var displayName = user.displayName;
                         var email = user.email;
                         var emailVerified = user.emailVerified;
@@ -651,6 +651,16 @@ var HomePage = (function () {
                 console.log("no hay sesión iniciada");
                 // ...
             }
+        });
+    };
+    HomePage.prototype.borraUsuario = function () {
+        var user = this.autFire.auth.currentUser;
+        user.delete().then(function () {
+            // User deleted.
+            console.log("usuario eliminado");
+        }).catch(function (error) {
+            // An error happened.
+            console.log("error ocurrido");
         });
     };
     HomePage = __decorate([
