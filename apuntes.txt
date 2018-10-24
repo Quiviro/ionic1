@@ -166,3 +166,6 @@ Binding de doble sentido, para asignar un valor introducido por el usuario
 Un = para asignación.
 Dos == para comparación.
 
+npm install jquery --save
+import * as $ from 'jquery';
+

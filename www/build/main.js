@@ -34,7 +34,7 @@ var PrimeraPaginaPage = (function () {
     };
     PrimeraPaginaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-primera-pagina',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/primera-pagina/primera-pagina.html"*/`<!--\n  Generated template for the PrimeraPaginaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-toolbar color="micolor">\n    <ion-title>Bicister</ion-title>\n    <ion-buttons>\n      <button ion-button>\n        <ion-icon name="unlock"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <h1>Las bicicletas son para el verano</h1>\n  <p>\n    En invierno llueve y pasas mucho frío.\n  </p>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/primera-pagina/primera-pagina.html"*/,
+            selector: 'page-primera-pagina',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/primera-pagina/primera-pagina.html"*/`<!--\n  Generated template for the PrimeraPaginaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-toolbar color="micolor">\n    <ion-buttons item-start>\n      <ion-toggle></ion-toggle>\n    </ion-buttons>\n    <ion-title text-center>Bicister</ion-title>\n\n    <ion-buttons end>\n        <button ion-button>\n          <ion-icon name="unlock"></ion-icon>\n        </button>\n    </ion-buttons>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <h1>Las bicicletas son para el verano</h1>\n  <p>\n    En invierno llueve y pasas mucho frío.\n  </p>\n  <ion-item text-center>\n      <iframe src="https://www.youtube.com/embed/mz-WH5ZKscY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n  </ion-item>\n  hoa\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/primera-pagina/primera-pagina.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], PrimeraPaginaPage);
@@ -461,6 +461,7 @@ var ServiciotareaProvider = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(298);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_google_maps__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__segundaa_pagina_segundaa_pagina__ = __webpack_require__(93);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -470,6 +471,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -548,17 +550,17 @@ var ContactPage = (function () {
             // data.coords.longitude
         });
     };
+    ContactPage.prototype.cargaPagina = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__segundaa_pagina_segundaa_pagina__["a" /* SegundaaPaginaPage */]);
+    };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/contact/contact.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Realiza foto\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content text-center>\n  <ion-list>\n    <ion-item>\n      <ion-label>Texto 1</ion-label>\n      <ion-input placeholder="input 1"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Texto 2</ion-label>\n      <ion-input placeholder="input 2"></ion-input>\n    </ion-item>\n  </ion-list>\n  \n  <hr>\n    <ion-item>\n      \n      <button large ion-button secondary (click)="foto()">\n        <ion-icon name="camera"></ion-icon>&nbsp;Sonríe\n      </button>\n    </ion-item>\n    <ion-item>\n      Mostrar foto\n      <button large ion-button secondary (click)="mostrarFoto()">\n        <ion-icon name="image"></ion-icon>\n      </button>\n    </ion-item>\n\n  <img *ngIf="base64Image" src=\'{{base64Image}}\'>\n  <img *ngIf="muestraFoto" src=\'{{base64Image}}\'>\n\n  <ion-item text-center>\n      Mapa\n    <button large ion-button (click)="localizar()" [ngStyle]="{\'display\': \'block\', \'margin\': \'auto\'}">\n    <ion-icon name="map" ></ion-icon>\n    </button>\n  </ion-item>\n  <div id="map_canvas"></div>\n\n\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/contact/contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/contact/contact.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Realiza foto\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content text-center>\n  <ion-list>\n    <ion-item>\n      <ion-label>Texto 1</ion-label>\n      <ion-input placeholder="input 1"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Texto 2</ion-label>\n      <ion-input placeholder="input 2"></ion-input>\n    </ion-item>\n  </ion-list>\n  \n  <hr>\n    <ion-item>\n      \n      <button large ion-button secondary (click)="foto()">\n        <ion-icon name="camera"></ion-icon>&nbsp;Sonríe\n      </button>\n    </ion-item>\n    <ion-item>\n      Mostrar foto\n      <button large ion-button secondary (click)="mostrarFoto()">\n        <ion-icon name="image"></ion-icon>\n      </button>\n    </ion-item>\n\n  <img *ngIf="base64Image" src=\'{{base64Image}}\'>\n  <img *ngIf="muestraFoto" src=\'{{base64Image}}\'>\n\n  <ion-item text-center>\n      Mapa\n    <button large ion-button (click)="localizar()" [ngStyle]="{\'display\': \'block\', \'margin\': \'auto\'}">\n    <ion-icon name="map" ></ion-icon>\n    </button>\n  </ion-item>\n  <div id="map_canvas"></div>\n  <br>\n  <button ion-button color="dark" (click)=\'cargaPagina()\'>Carga página</button>\n\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/contact/contact.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_google_maps__["a" /* GoogleMaps */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_google_maps__["a" /* GoogleMaps */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_google_maps__["a" /* GoogleMaps */]) === "function" && _e || Object])
     ], ContactPage);
     return ContactPage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=contact.js.map

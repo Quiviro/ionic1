@@ -3,6 +3,7 @@ import { NavController, Platform } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
 import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapOptions, CameraPosition, MarkerOptions, Marker, Environment, LatLng } from '@ionic-native/google-maps';
+import { SegundaaPaginaPage } from "../segundaa-pagina/segundaa-pagina";
 
 
 @Component({
@@ -97,6 +98,11 @@ export class ContactPage {
       // data.coords.latitude
       // data.coords.longitude
      });
+  }
+
+  cargaPagina()
+  {
+    this.navCtrl.push(SegundaaPaginaPage);
   }
   
 
