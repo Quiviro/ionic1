@@ -240,7 +240,7 @@ var AboutPage = (function () {
         this.modCtrl = modCtrl;
         this.servicioTarea = servicioTarea;
     }
-    AboutPage.prototype.ionViewDidLoad = function () {
+    AboutPage.prototype.ionViewDidEnter = function () {
         /* this.tareas = [
           new TareaModelo("Compras"),
           new TareaModelo("Deporte", true),
@@ -251,6 +251,7 @@ var AboutPage = (function () {
           new TareaModelo("Departamento Q", true, true),
           new TareaModelo("Entrenar", true)
         ]; */
+        this.servicioTarea.set();
     };
     AboutPage.prototype.nuevaTarea = function () {
         var _this = this;
@@ -301,11 +302,10 @@ var AboutPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-about',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Tareas\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <!-- <ion-item-sliding *ngFor = \'let tarea of this.servicioTarea.tareas\'> -->\n    <ion-item-sliding *ngFor = \'let tarea of this.servicioTarea.observador\'>\n      <ion-item ion-item [ngStyle]=\'estiloNuevo(tarea)\'>\n        <ion-label>{{tarea.descripcion}} (<small>{{tarea.id}}</small>)</ion-label>\n        <ion-checkbox [checked]="tarea.realizada" (click)="comprobar(tarea)"></ion-checkbox>\n        <!-- <ion-checkbox [checked]="tarea.importante"></ion-checkbox> -->\n      </ion-item>\n      <ion-item-options side="right">\n        <button ion-button color="micolor" margin (click)="borrarTarea(tarea)">\n          <ion-icon name="trash"></ion-icon>\n        </button>\n         &nbsp; &nbsp;\n        <button ion-button color="micolor" margin (click)="actualizarTarea(tarea)">\n          <ion-icon name="folder-open"></ion-icon>\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n  <ion-fab right bottom (click)="nuevaTarea()">\n    <button ion-fab color="danger">\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/about/about.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_3__servicios_serviciotarea__["a" /* ServiciotareaProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__servicios_serviciotarea__["a" /* ServiciotareaProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__servicios_serviciotarea__["a" /* ServiciotareaProvider */]) === "function" && _c || Object])
     ], AboutPage);
     return AboutPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=about.js.map
@@ -437,14 +437,23 @@ var ServiciotareaProvider = (function () {
             }
         });
     };
+    // public actualiza(tarea)
+    // {
+    //   this.afd.doc(`tareas/${tarea.id}`).update().then();
+    // }
+    ServiciotareaProvider.prototype.set = function () {
+        this.id = 2;
+    };
+    ServiciotareaProvider.prototype.devuelveValor = function () {
+        console.log(this.id);
+        return this.id;
+    };
     ServiciotareaProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_6_angularfire2_firestore__["AngularFirestore"]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* ModalController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6_angularfire2_firestore__["AngularFirestore"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_angularfire2_firestore__["AngularFirestore"]) === "function" && _d || Object])
     ], ServiciotareaProvider);
     return ServiciotareaProvider;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=serviciotarea.js.map
@@ -974,13 +983,17 @@ var SegundaaPaginaPage = (function () {
     SegundaaPaginaPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad SegundaaPaginaPage');
     };
+    SegundaaPaginaPage.prototype.ionViewWillEnter = function () {
+        if (this.navParams.get('id')) { }
+    };
     SegundaaPaginaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-segundaa-pagina',template:/*ion-inline-start:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/segundaa-pagina/segundaa-pagina.html"*/`<!--\n  Generated template for the SegundaaPaginaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Nine Inch Nails</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <img src="assets/imgs/nin-live.png"/>\n    <ion-card-content>\n      <ion-card-title>\n        Nine Inch Nails Live\n      </ion-card-title>\n      <p>\n        The most popular industrial group ever, and largely\n        responsible for bringing the music to a mass audience.\n      </p>\n      <br>\n      <ion-list>\n          <button ion-item *ngFor = \'let tarea of tareas\'>\n            <ion-icon name="{{tarea.icono}}" item-start \n            [ngStyle]="{\'color\':tarea.color}" ></ion-icon>\n            {{tarea.titulo}}\n          </button>\n      \n        </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n`/*ion-inline-end:"/Users/Dev2/Documents/201810-JavaScript_Ionic-CFTIC/Ionic/ionic1/src/pages/segundaa-pagina/segundaa-pagina.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
     ], SegundaaPaginaPage);
     return SegundaaPaginaPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=segundaa-pagina.js.map

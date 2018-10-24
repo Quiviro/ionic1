@@ -19,7 +19,7 @@ export class AboutPage {
 
   }
 
-  ionViewDidLoad()
+  ionViewDidEnter()
   {
     /* this.tareas = [
       new TareaModelo("Compras"),
@@ -31,6 +31,7 @@ export class AboutPage {
       new TareaModelo("Departamento Q", true, true),
       new TareaModelo("Entrenar", true)
     ]; */
+    this.servicioTarea.set();
   }
 
   nuevaTarea()

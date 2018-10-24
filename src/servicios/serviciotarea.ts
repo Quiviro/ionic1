@@ -26,6 +26,7 @@ export class ServiciotareaProvider {
   public coleccion: AngularFirestoreCollection<TareaModelo>;
   // antes recorría la matriz de "Tareas", ahora será la matriz "observador"
   public observador:TareaModelo[];
+  public id:number;
 
   constructor(public http: HttpClient,
     private storage: Storage,
@@ -131,6 +132,14 @@ export class ServiciotareaProvider {
   // {
   //   this.afd.doc(`tareas/${tarea.id}`).update().then();
   // }
-
+  set()
+  {
+    this.id = 2;
+  }
+  public devuelveValor()
+  {
+    console.log(this.id);
+    return this.id;
+  }
 
 }

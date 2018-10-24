@@ -22,6 +22,12 @@ export class SegundaaPaginaPage {
     console.log('ionViewDidLoad SegundaaPaginaPage');
   }
 
+  ionViewWillEnter()
+  {
+    if(this.navParams.get('id'))
+    {}
+  }
+
   tareas:Array<any> = [
     {titulo:"Pádel", color:"red", icono:"baseball"},
     {titulo:"Hospital", color:"blue", icono:"medical"},
